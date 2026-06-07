@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://codex.studio.ve/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://codex.studio.ve/?lang=es" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://codex.studio.ve/?lang=en" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://codex.studio.ve/?lang=zh" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://codex.studio.ve/" />
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://codex.studio.ve/terminos</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://codex.studio.ve/terminos?lang=es" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://codex.studio.ve/terminos?lang=en" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://codex.studio.ve/terminos?lang=zh" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://codex.studio.ve/terminos" />
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://codex.studio.ve/privacidad</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://codex.studio.ve/privacidad?lang=es" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://codex.studio.ve/privacidad?lang=en" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://codex.studio.ve/privacidad?lang=zh" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://codex.studio.ve/privacidad" />
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://codex.studio.ve/faq</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://codex.studio.ve/faq?lang=es" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://codex.studio.ve/faq?lang=en" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://codex.studio.ve/faq?lang=zh" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://codex.studio.ve/faq" />
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+</urlset>

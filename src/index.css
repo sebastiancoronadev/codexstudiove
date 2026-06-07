@@ -1,0 +1,280 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --color-primary-dark: #000000;
+  --color-primary-light: #0a0a0a;
+  --color-accent-1: #ff007f;
+  --color-accent-2: #ff0000;
+  --color-accent-hover: #ff6b00;
+
+  --font-sans: "Sora", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Space Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-tech: "Space Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+body {
+  background-color: var(--color-primary-dark);
+  color: #ffffff;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  cursor: default;
+  background-image: radial-gradient(
+    circle at 50% 0%,
+    rgba(255, 0, 127, 0.05),
+    transparent 60%
+  );
+}
+
+.bg-grid {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 40px 40px;
+  -webkit-mask-image: radial-gradient(
+    ellipse at center,
+    black 0%,
+    transparent 80%
+  );
+  mask-image: radial-gradient(ellipse at center, black 0%, transparent 80%);
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  opacity: 0.02;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-sans);
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+.font-tech {
+  font-family: var(--font-tech);
+}
+
+.snake-border {
+  position: relative;
+  border-radius: 16px;
+  background: rgba(10, 10, 10, 0.4);
+  overflow: hidden;
+}
+
+/* Enhanced tech glow gradient for snake border */
+.snake-border::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0%,
+    transparent 80%,
+    #ff007f 90%,
+    #ff0000 95%,
+    #ff6b00 100%
+  );
+  animation: snakeRotate 4s linear infinite;
+  z-index: 0;
+  transform-origin: center;
+}
+
+.snake-border::after {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  background: #0a0a0a;
+  border-radius: 14px;
+  z-index: 0;
+}
+
+.snake-border > * {
+  position: relative;
+  z-index: 1;
+}
+
+.mask-image-fade {
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
+}
+
+.glow-effect {
+  box-shadow:
+    0 0 20px rgba(255, 0, 127, 0.4),
+    inset 0 0 10px rgba(255, 0, 0, 0.2);
+}
+
+@keyframes snakeRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+button,
+a {
+  cursor: pointer !important;
+}
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+::-webkit-scrollbar-thumb {
+  background: #ff007f;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ff6b00;
+}
+
+/* Hide scrollbar for elements */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Glitch effect for logo */
+.glitch-text {
+  position: relative;
+}
+.glitch-text:hover::before,
+.glitch-text:hover::after {
+  content: "CODEX";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+}
+.glitch-text:hover::before {
+  left: 2px;
+  text-shadow: -2px 0 red;
+  clip: rect(24px, 550px, 90px, 0);
+  animation: glitch-anim-2 3s infinite linear alternate-reverse;
+}
+.glitch-text:hover::after {
+  left: -2px;
+  text-shadow: -2px 0 blue;
+  clip: rect(85px, 550px, 140px, 0);
+  animation: glitch-anim 2.5s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-anim {
+  0% {
+    clip: rect(25px, 9999px, 83px, 0);
+  }
+  20% {
+    clip: rect(61px, 9999px, 13px, 0);
+  }
+  40% {
+    clip: rect(100px, 9999px, 4px, 0);
+  }
+  60% {
+    clip: rect(19px, 9999px, 80px, 0);
+  }
+  80% {
+    clip: rect(98px, 9999px, 66px, 0);
+  }
+  100% {
+    clip: rect(32px, 9999px, 42px, 0);
+  }
+}
+
+@keyframes glitch-anim-2 {
+  0% {
+    clip: rect(81px, 9999px, 92px, 0);
+  }
+  20% {
+    clip: rect(38px, 9999px, 20px, 0);
+  }
+  40% {
+    clip: rect(68px, 9999px, 46px, 0);
+  }
+  60% {
+    clip: rect(8px, 9999px, 63px, 0);
+  }
+  80% {
+    clip: rect(97px, 9999px, 5px, 0);
+  }
+  100% {
+    clip: rect(27px, 9999px, 53px, 0);
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee-reverse {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 45s linear infinite;
+}
+
+.animate-marquee-reverse {
+  animation: marquee-reverse 45s linear infinite;
+}
+
+.animate-marquee-slow {
+  animation: marquee 70s linear infinite;
+}
