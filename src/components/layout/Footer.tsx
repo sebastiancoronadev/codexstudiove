@@ -10,7 +10,11 @@ export default function Footer() {
     { name: 'X', url: '', icon: 'fa-brands fa-x-twitter' },
     { name: 'YouTube', url: 'https://youtube.com/@codexstudiove', icon: 'fa-brands fa-youtube' },
     { name: 'Discord', url: 'https://discord.gg/793142687858950144', icon: 'fa-brands fa-discord' },
+<<<<<<< HEAD
     { name: 'Reddit', url: 'https://reddit.com/r/sebastiancoronadev', icon: 'fa-brands fa-reddit' },
+=======
+    { name: 'Reddit', url: 'https://reddit.com/r/codexstudiove', icon: 'fa-brands fa-reddit' },
+>>>>>>> 772f8e56fd7f88eb5aa2f75591854e5a0e85ec3a
   ]
 
   return (
@@ -50,6 +54,7 @@ export default function Footer() {
             <h3 className="text-white font-semibold mb-4">{t('footer.legal')}</h3>
             <div className="space-y-2 text-sm">
               <Link to="/terminos" className="flex items-center gap-2 text-zinc-400 hover:text-brand-pink transition-colors group">
+<<<<<<< HEAD
                 <span className="group-hover:translate-x-1 transition-transform">?</span> {t('footer.terms')}
               </Link>
               <Link to="/faq" className="flex items-center gap-2 text-zinc-400 hover:text-brand-pink transition-colors group">
@@ -57,6 +62,15 @@ export default function Footer() {
               </Link>
               <Link to="/privacidad" className="flex items-center gap-2 text-zinc-400 hover:text-brand-pink transition-colors group">
                 <span className="group-hover:translate-x-1 transition-transform">?</span> {t('footer.privacy')}
+=======
+                <span className="group-hover:translate-x-1 transition-transform">➜</span> {t('footer.terms')}
+              </Link>
+              <Link to="/faq" className="flex items-center gap-2 text-zinc-400 hover:text-brand-pink transition-colors group">
+                <span className="group-hover:translate-x-1 transition-transform">➜</span> {t('footer.faq')}
+              </Link>
+              <Link to="/privacidad" className="flex items-center gap-2 text-zinc-400 hover:text-brand-pink transition-colors group">
+                <span className="group-hover:translate-x-1 transition-transform">➜</span> {t('footer.privacy')}
+>>>>>>> 772f8e56fd7f88eb5aa2f75591854e5a0e85ec3a
               </Link>
             </div>
           </div>

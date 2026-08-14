@@ -1,6 +1,7 @@
 ﻿User-agent: *
 Allow: /
 Disallow: /api/
+<<<<<<< HEAD
 
 User-agent: Googlebot
 Allow: /
@@ -36,3 +37,6 @@ User-agent: YandexBot
 Allow: /
 
 Sitemap: https://www.codexstudiove.com/sitemap.xml
+=======
+Sitemap: https://codexstudiove.com/sitemap.xml
+>>>>>>> 772f8e56fd7f88eb5aa2f75591854e5a0e85ec3a

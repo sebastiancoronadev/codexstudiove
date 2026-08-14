@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 ﻿import React, { useRef, useEffect } from 'react';
+=======
+import React, { useRef, useEffect } from 'react';
+>>>>>>> 772f8e56fd7f88eb5aa2f75591854e5a0e85ec3a
 import { useInView } from 'motion/react';
 import SEO from './SEO';
 

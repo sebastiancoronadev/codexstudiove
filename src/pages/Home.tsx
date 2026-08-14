@@ -12,7 +12,10 @@ const Services = lazy(() => import('../components/sections/Services'))
 const StatsCounter = lazy(() => import('../components/sections/StatsCounter'))
 const Specialization = lazy(() => import('../components/sections/Specialization'))
 const AboutUs = lazy(() => import('../components/sections/AboutUs'))
+<<<<<<< HEAD
 const CarlosRomero = lazy(() => import('../components/sections/CarlosRomero'))
+=======
+>>>>>>> 772f8e56fd7f88eb5aa2f75591854e5a0e85ec3a
 const VideoEditing = lazy(() => import('../components/sections/VideoEditing'))
 const DiscordConfig = lazy(() => import('../components/sections/DiscordConfig'))
 const MinecraftServers = lazy(() => import('../components/sections/MinecraftServers'))
@@ -38,7 +41,11 @@ export default function Home() {
   const { t } = useLanguage()
   return (
     <>
+<<<<<<< HEAD
       <SEO title="Codex Studio VE | Desarrollo Web Full-Stack & SEO | Latinoamérica" description="Codex Studio VE: Desarrollo de software, apps web, ecommerce, APIs, microservicios, edición de video, Discord y Minecraft. +100 proyectos, 7+ años de experiencia." />
+=======
+      <SEO title="Codex Studio | Desarrollo Web Full-Stack & SEO | Latinoamérica" description="Codex Studio: Desarrollo de software, apps web, ecommerce, APIs, microservicios, edición de video, Discord y Minecraft. +100 proyectos, 5+ años de experiencia." />
+>>>>>>> 772f8e56fd7f88eb5aa2f75591854e5a0e85ec3a
       <OrganizationSchema />
       <WebSiteSchema />
       <CursorGlow />
@@ -54,6 +61,7 @@ export default function Home() {
           <Specialization />
           <PageDivider variant="glow" />
           <AboutUs />
+<<<<<<< HEAD
           <CarlosRomero />
           <PageDivider variant="default" />
           <VideoEditing />
@@ -76,6 +84,29 @@ export default function Home() {
         <Suspense fallback={<LoadingFallback />}>
           <CTASection />
           <PageDivider variant="default" />
+=======
+          <PageDivider variant="minimal" />
+          <VideoEditing />
+          <PageDivider variant="default" />
+          <DiscordConfig />
+          <PageDivider variant="glow" />
+          <MinecraftServers />
+          <PageDivider variant="minimal" />
+          <Testimonials />
+          <PageDivider variant="default" />
+          <Brands />
+          <PageDivider variant="glow" />
+          <PaymentMethods />
+          <PageDivider variant="minimal" />
+        </Suspense>
+        <SecurePayments />
+        <PageDivider variant="default" />
+        <GlobalPresence />
+        <PageDivider variant="glow" />
+        <Suspense fallback={<LoadingFallback />}>
+          <CTASection />
+          <PageDivider variant="minimal" />
+>>>>>>> 772f8e56fd7f88eb5aa2f75591854e5a0e85ec3a
           <Contact />
         </Suspense>
       </main>

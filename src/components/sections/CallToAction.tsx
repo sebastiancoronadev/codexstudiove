@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 ﻿import React from 'react';
+=======
+import React from 'react';
+>>>>>>> 772f8e56fd7f88eb5aa2f75591854e5a0e85ec3a
 import { motion } from 'motion/react';
 import { useLanguage } from '../../i18n/LanguageContext';
 

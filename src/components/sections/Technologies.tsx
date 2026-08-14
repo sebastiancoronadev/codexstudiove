@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 ﻿import React, { useState, useEffect } from 'react';
+=======
+import React, { useState, useEffect } from 'react';
+>>>>>>> 772f8e56fd7f88eb5aa2f75591854e5a0e85ec3a
 import { motion, AnimatePresence } from 'motion/react';
 import { useLanguage } from '../../i18n/LanguageContext';
 
