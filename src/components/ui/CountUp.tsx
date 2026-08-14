@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-﻿import React, { useEffect, useState, useRef } from 'react';
-=======
+﻿ï»¿import React, { useEffect, useState, useRef } from 'react';
 import React, { useEffect, useState, useRef } from 'react';
->>>>>>> 772f8e56fd7f88eb5aa2f75591854e5a0e85ec3a
 import { useInView, useAnimation, motion } from 'motion/react';
 
 interface CountUpProps {

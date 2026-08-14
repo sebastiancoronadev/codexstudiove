@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-﻿import React from 'react';
-=======
+﻿ï»¿import React from 'react';
 import React from 'react';
->>>>>>> 772f8e56fd7f88eb5aa2f75591854e5a0e85ec3a
 import { motion } from 'motion/react';
 import { useLanguage } from '../../i18n/LanguageContext';
 
@@ -42,7 +39,7 @@ export default function Sponsors() {
                 <h3 className="text-2xl font-bold text-white">SimRacing Sponsor</h3>
               </div>
               <p className="text-gray-400 leading-relaxed mb-6 relative z-10">
-                Codex Studio es un orgulloso patrocinador activo dentro de la comunidad de SimRacing. Mis diseños y marca tienen presencia en vallas publicitarias dentro de los circuitos virtuales de competición más importantes, apoyando a pilotos y eventos de alto nivel a nivel global.
+                Codex Studio es un orgulloso patrocinador activo dentro de la comunidad de SimRacing. Mis diseÃ±os y marca tienen presencia en vallas publicitarias dentro de los circuitos virtuales de competiciÃ³n mÃ¡s importantes, apoyando a pilotos y eventos de alto nivel a nivel global.
               </p>
               <div className="flex gap-4 relative z-10">
                 <div className="w-12 h-12 bg-[#1A1A1A] rounded-lg flex items-center justify-center text-white/50 group-hover:text-white transition-colors border border-gray-800">

@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-﻿import express from "express";
-=======
+﻿ï»¿import express from "express";
 import express from "express";
->>>>>>> 772f8e56fd7f88eb5aa2f75591854e5a0e85ec3a
 import path from "path";
 import { createServer as createViteServer } from "vite";
 

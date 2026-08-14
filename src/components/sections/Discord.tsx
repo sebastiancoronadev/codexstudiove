@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-﻿import React from 'react';
-=======
+﻿ï»¿import React from 'react';
 import React from 'react';
->>>>>>> 772f8e56fd7f88eb5aa2f75591854e5a0e85ec3a
 import { motion } from 'motion/react';
 import { useLanguage } from '../../i18n/LanguageContext';
 import InViewSEO from '../InViewSEO';
@@ -11,7 +8,7 @@ export default function Discord() {
   const { t } = useLanguage();
 
   const services = [
-    { title: t('discord.svc1.title'), desc: t('discord.svc1.desc'), icon: "web-diseño-servidores-discord.svg" },
+    { title: t('discord.svc1.title'), desc: t('discord.svc1.desc'), icon: "web-diseÃ±o-servidores-discord.svg" },
     { title: t('discord.svc2.title'), desc: t('discord.svc2.desc'), icon: "web-seguridad-servidor-discord.svg" },
     { title: t('discord.svc3.title'), desc: t('discord.svc3.desc'), icon: "web-discord-bot.svg" },
     { title: t('discord.svc4.title'), desc: t('discord.svc4.desc'), icon: "web-minecraft-economia.svg" },
@@ -23,9 +20,9 @@ export default function Discord() {
   return (
     <section id="discord" className="py-24 relative overflow-hidden bg-[#0a0a0a] border-t border-[#111]" itemScope itemType="https://schema.org/Service">
       <InViewSEO 
-        title="Servidores Discord Profesionales | Configuración, Bots y Seguridad"
-        description="Configuración profesional de servidores Discord con bots personalizados, sistemas de tickets, economía, minijuegos y protección anti-raid. Ideal para comunidades gaming y corporativas."
-        keywords="servidor discord, bots discord, configurar discord, discord profesional, discord seguridad, discord tickets, discord economía"
+        title="Servidores Discord Profesionales | ConfiguraciÃ³n, Bots y Seguridad"
+        description="ConfiguraciÃ³n profesional de servidores Discord con bots personalizados, sistemas de tickets, economÃ­a, minijuegos y protecciÃ³n anti-raid. Ideal para comunidades gaming y corporativas."
+        keywords="servidor discord, bots discord, configurar discord, discord profesional, discord seguridad, discord tickets, discord economÃ­a"
       />
       <meta itemProp="serviceType" content="Discord Server Setup" />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#5865F2]/5 blur-[120px] rounded-full pointer-events-none"></div>
