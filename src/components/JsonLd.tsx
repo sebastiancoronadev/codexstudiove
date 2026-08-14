@@ -123,8 +123,5 @@ export function FAQSchema({ questions }: { questions: Array<{ question: string; 
       <script type="application/ld+json">{JSON.stringify(schema)}</script>
     </Helmet>
   )
-<<<<<<< HEAD
 }
-=======
 }
->>>>>>> 772f8e56fd7f88eb5aa2f75591854e5a0e85ec3a

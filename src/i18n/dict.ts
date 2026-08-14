@@ -1,7 +1,6 @@
 ﻿export type Language = 'es' | 'en' | 'zh' | 'ja'
 
 export interface Dictionary {
-<<<<<<< HEAD
   nav: { home: string; services: string; payment: string; cta: string; contact: string }
   hero: { title: string; description: string; cta: string; discover: string }
   services: { title: string; subtitle: string; web: { title: string; description: string }; backend: { title: string; description: string }; ux: { title: string; description: string } }
@@ -19,7 +18,6 @@ export interface Dictionary {
   ctaSection: { title: string; subtitle: string; buttons: { web: string; video: string; discord: string; minecraft: string } }
   contact: { title: string; subtitle: string; name: string; email: string; phone: string; projectType: string; details: string; submit: string; select: string }
   footer: { description: string; contact: string; email: string; phone: string; location: string; legal: string; terms: string; faq: string; privacy: string; copyright: string }
-=======
   nav: {
     home: string
     services: string
@@ -126,12 +124,10 @@ export interface Dictionary {
     privacy: string
     copyright: string
   }
->>>>>>> 772f8e56fd7f88eb5aa2f75591854e5a0e85ec3a
 }
 
 export const dictionaries: Record<Language, Dictionary> = {
   es: {
-<<<<<<< HEAD
     nav: { home: 'Inicio', services: 'Servicios', payment: 'Métodos de Pago', cta: 'Haz una web', contact: 'Contacto' },
     hero: { title: 'Transformando Ideas en Realidad Digital', description: 'Desarrollo software, aplicaciones web y soluciones tecnológicas personalizadas con amplios conocimientos en la industria. Estrategias digitales que impulsan negocios.', cta: 'Haz una web conmigo', discover: 'Descubre' },
     services: {
@@ -218,7 +214,6 @@ export const dictionaries: Record<Language, Dictionary> = {
     footer: { description: 'アイデアをデジタルの現実に。', contact: 'お問い合わせ', email: 'contacto@codexstudiove.com', phone: 'なし', location: 'ベネズエラ、バレンシア', legal: '法的情報', terms: '利用規約', faq: 'よくある質問', privacy: 'プライバシーポリシー', copyright: '© 2026 Codex。全著作権所有。' }
   }
 }
-=======
     nav: {
       home: 'Inicio',
       services: 'Servicios',
@@ -687,4 +682,3 @@ export const dictionaries: Record<Language, Dictionary> = {
     }
   }
 }
->>>>>>> 772f8e56fd7f88eb5aa2f75591854e5a0e85ec3a

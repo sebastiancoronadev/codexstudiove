@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-﻿import React from 'react';
-=======
+﻿ï»¿import React from 'react';
 import React from 'react';
->>>>>>> 772f8e56fd7f88eb5aa2f75591854e5a0e85ec3a
 import { motion } from 'motion/react';
 import { useLanguage } from '../../i18n/LanguageContext';
 import InViewSEO from '../InViewSEO';
@@ -23,7 +20,7 @@ export default function Minecraft() {
     <section id="minecraft" className="py-24 relative overflow-hidden bg-[#050505] border-t border-[#111]" itemScope itemType="https://schema.org/Service">
       <InViewSEO 
         title="Servidores Minecraft Profesionales | BungeeCord, Plugins y Modpacks"
-        description="Configuración avanzada de servidores Minecraft con BungeeCord, plugins personalizados, modpacks Forge/Fabric, anticheat y dashboards. Redes multigamemode Survival, Skyblock y Factions."
+        description="ConfiguraciÃ³n avanzada de servidores Minecraft con BungeeCord, plugins personalizados, modpacks Forge/Fabric, anticheat y dashboards. Redes multigamemode Survival, Skyblock y Factions."
         keywords="servidor minecraft, bungeecord, plugins minecraft, modpacks, minecraft hosting, pterodactyl, anticheat minecraft"
       />
       <meta itemProp="serviceType" content="Minecraft Server Hosting & Configuration" />

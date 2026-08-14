@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-﻿import React from "react";
-=======
+﻿ï»¿import React from "react";
 import React from "react";
->>>>>>> 772f8e56fd7f88eb5aa2f75591854e5a0e85ec3a
 import { motion, useAnimationControls } from "motion/react";
 import { useLanguage } from "../../i18n/LanguageContext";
 
@@ -51,7 +48,7 @@ export default function Trust() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-5xl font-bold font-sans text-white mb-6">
-            {t('trust.title') || 'Por qué ellos confían en nosotros'}
+            {t('trust.title') || 'Por quÃ© ellos confÃ­an en nosotros'}
           </h2>
           <p className="text-lg text-gray-400 font-sans max-w-2xl mx-auto">
             {t('trust.desc') || 'Hemos colaborado con grandes marcas y proyectos para llevar sus ideas al siguiente nivel.'}
