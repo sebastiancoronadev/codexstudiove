@@ -95,7 +95,6 @@ export default function Contact() {
                   </div>
                   <input type="tel" name="phone" value={formData.phone} onChange={(e) => setFormData({...formData, phone: e.target.value})} className="flex-1 min-w-0 px-3 py-2.5 md:py-3 bg-black/50 border border-zinc-700 rounded-xl text-white text-sm md:text-base placeholder-zinc-600 focus:outline-none focus:border-brand-pink/50 transition-all" placeholder="4121234567" />
                 </div>
-              </div>
               <div>
                 <label className="block text-sm font-medium text-zinc-400 mb-1.5 md:mb-2">{t('contact.projectType')}</label>
                 <div className="relative">
@@ -111,8 +110,6 @@ export default function Contact() {
                     </div>
                   )}
                 </div>
-              </div>
-            </div>
 
             <div>
               <label className="block text-sm font-medium text-zinc-400 mb-1.5 md:mb-2">{t('contact.details')}</label>

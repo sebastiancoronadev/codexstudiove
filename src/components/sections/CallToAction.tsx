@@ -1,3 +1,4 @@
+﻿ï»¿import React from 'react';
 import React from 'react';
 import { motion } from 'motion/react';
 import { useLanguage } from '../../i18n/LanguageContext';
@@ -37,7 +38,7 @@ export default function CallToAction() {
           {t('cta.title') || 'Haz una web conmigo'}
         </h2>
         <p className="text-xl text-gray-300 leading-relaxed mb-12 drop-shadow-md font-sans">
-          {t('cta.desc') || 'Transforma tu idea en una realidad digital. Aportando una sólida experiencia, garantizo soluciones web profesionales, optimizadas y de alto rendimiento que impulsarán tu negocio.'}
+          {t('cta.desc') || 'Transforma tu idea en una realidad digital. Aportando una sÃ³lida experiencia, garantizo soluciones web profesionales, optimizadas y de alto rendimiento que impulsarÃ¡n tu negocio.'}
         </p>
         
         <div className="flex flex-wrap justify-center gap-4">

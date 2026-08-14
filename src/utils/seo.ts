@@ -44,8 +44,6 @@ export function generateMetaTags(page: string, lang: string) {
         zh: '准备开始您的项目了吗？今天就联系我们，将您的想法转化为数字现实。拉丁美洲的专业网页开发。',
         ja: 'プロジェクトを始める準備はできましたか？今日ご連絡いただき、あなたのアイデアをデジタルの現実に変えましょう。ラテンアメリカのプロフェッショナルWeb開発。'
       }
-    }
-  }
 
   const pageData = pages[page] || pages.home
   
@@ -53,7 +51,6 @@ export function generateMetaTags(page: string, lang: string) {
     title: pageData.title[lang] || pageData.title.es,
     description: pageData.description[lang] || pageData.description.es
   }
-}
 
 // Generar sitemap dinámico
 export function generateSitemapXML() {

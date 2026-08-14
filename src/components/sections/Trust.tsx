@@ -1,3 +1,4 @@
+﻿ï»¿import React from "react";
 import React from "react";
 import { motion, useAnimationControls } from "motion/react";
 import { useLanguage } from "../../i18n/LanguageContext";
@@ -26,11 +27,6 @@ export default function Trust() {
   // Carousel items duplicated for seamless infinite scrolling
   const carouselItems = [
     ...clients,
-    ...clients,
-    ...clients,
-    ...clients,
-    ...clients,
-    ...clients,
   ];
 
   return (
@@ -47,7 +43,7 @@ export default function Trust() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-5xl font-bold font-sans text-white mb-6">
-            {t('trust.title') || 'Por qué ellos confían en nosotros'}
+            {t('trust.title') || 'Por quÃ© ellos confÃ­an en nosotros'}
           </h2>
           <p className="text-lg text-gray-400 font-sans max-w-2xl mx-auto">
             {t('trust.desc') || 'Hemos colaborado con grandes marcas y proyectos para llevar sus ideas al siguiente nivel.'}
@@ -77,8 +73,6 @@ export default function Trust() {
               </div>
             ))}
           </div>
-        </div>
-      </div>
     </section>
   );
 }

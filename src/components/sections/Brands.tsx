@@ -40,8 +40,6 @@ export default function Brands() {
               </div>
             ))}
           </div>
-        </div>
-      </div>
     </section>
   )
 }

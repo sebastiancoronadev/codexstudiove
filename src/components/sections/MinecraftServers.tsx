@@ -41,7 +41,6 @@ export default function MinecraftServers() {
         <div className="text-center">
           <a href="#contact" className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold rounded-full hover:shadow-lg transition-all inline-block">{t('minecraft.title')}</a>
         </div>
-      </div>
     </section>
   )
 }

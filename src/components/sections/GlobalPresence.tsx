@@ -1,4 +1,4 @@
-﻿import { useState, useEffect, useRef, useMemo } from 'react'
+import { useState, useEffect, useRef, useMemo } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import Globe from 'react-globe.gl'
 import { useLanguage } from '../../i18n/LanguageContext'
@@ -23,7 +23,7 @@ export default function GlobalPresence() {
     { id: 'us', name: 'Estados Unidos', lat: 37.0, lng: -95.7, color: '#3B82F6', size: 1.0 },
     { id: 'es', name: 'España', lat: 40.4, lng: -3.7, color: '#FFD700', size: 1.0 },
     { id: 'cn', name: 'China', lat: 35.8, lng: 104.1, color: '#FF0000', size: 1.0 },
-    { id: 'jp', name: 'Japón', lat: 36.2048, lng: 138.2529, color: '#FF3B30', size: 1.0 },
+    { id: 'jp', name: 'Japón', lat: 36.2048, lng: 138.2529, color: '#FF3B30', size: 1.0 }
   ], [])
 
   const countryNames: Record<string, Record<string, string>> = {
@@ -38,17 +38,10 @@ export default function GlobalPresence() {
     us: { es: 'Estados Unidos', en: 'United States', zh: '美国', ja: 'アメリカ' },
     es: { es: 'España', en: 'Spain', zh: '西班牙', ja: 'スペイン' },
     cn: { es: 'China', en: 'China', zh: '中国', ja: '中国' },
-    jp: { es: 'Japón', en: 'Japan', zh: '日本', ja: '日本' },
+    jp: { es: 'Japón', en: 'Japan', zh: '日本', ja: '日本' }
   }
 
-  const connectingTexts: Record<string, string> = {
-    es: 'Conectando el mundo con',
-    en: 'Connecting the world with',
-    zh: '连接世界与',
-    ja: '世界を繋ぐ',
-  }
-
-  const isMobile = dimensions <= 320
+  const connectingTexts: Record<string, string> = { es: 'Conectando el mundo con', en: 'Connecting the world with', zh: '连接世界与', ja: '世界を繋ぐ' }
 
   useEffect(() => {
     const handleResize = () => { if (window.innerWidth < 768) setDimensions(320); else if (window.innerWidth < 1024) setDimensions(600); else setDimensions(700) }
@@ -64,7 +57,6 @@ export default function GlobalPresence() {
 
   return (
     <section id="global" className="relative py-24 bg-[#0a0a0a] overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(0,100,255,0.05),transparent_70%)]"></div>
       <div ref={ref} className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div initial={{ opacity: 0, y: 30 }} animate={inView ? { opacity: 1, y: 0 } : {}} className="text-center mb-8">
           <h2 className="text-4xl md:text-5xl font-bold mb-4"><span className="text-gradient">{t('global.title')}</span></h2>
@@ -77,7 +69,6 @@ export default function GlobalPresence() {
             </AnimatePresence>
           </p>
         </motion.div>
-
         <div className="flex justify-center pointer-events-none cursor-default">
           <Globe
             ref={globeRef} width={dimensions} height={dimensions} globeImageUrl="/images/earth.jpg" backgroundColor="rgba(0,0,0,0)" atmosphereColor="#0066FF" atmosphereAltitude={0.15}
@@ -86,11 +77,8 @@ export default function GlobalPresence() {
             htmlElementsData={[{ lat: currentCountry.lat, lng: currentCountry.lng, name: countryNames[currentCountry.id]?.[lang] || currentCountry.name, color: currentCountry.color, text: connectingTexts[lang] || connectingTexts.es }]}
             htmlElement={(d: any) => {
               const el = document.createElement('div')
-              const padding = isMobile ? '6px 10px' : '10px 16px'
-              const fontSize = isMobile ? '10px' : '13px'
-              const strongSize = isMobile ? '13px' : '18px'
-              const borderRadius = isMobile ? '8px' : '12px'
-              el.innerHTML = `<div style="background: rgba(10,10,10,0.9); border: 2px solid ${d.color}; padding: ${padding}; border-radius: ${borderRadius}; color: white; backdrop-filter: blur(8px); box-shadow: 0 4px 20px rgba(0,0,0,0.6); transform: translate(-50%, -50%); text-align: center; white-space: nowrap;"><span style="color: #9CA3AF; font-size: ${fontSize}; display: block; margin-bottom: 4px;">${d.text}</span><strong style="color: ${d.color}; font-size: ${strongSize};">${d.name}</strong></div>`
+              const isMobile = window.innerWidth < 768
+              el.innerHTML = `<div style="background:rgba(10,10,10,0.9);border:2px solid ${d.color};padding:${isMobile ? '6px 10px' : '10px 16px'};border-radius:12px;color:white;backdrop-filter:blur(8px);box-shadow:0 4px 20px rgba(0,0,0,0.6);transform:translate(-50%,-50%);text-align:center;white-space:nowrap;"><span style="color:#9CA3AF;font-size:${isMobile ? '10px' : '13px'};display:block;margin-bottom:4px;">${d.text}</span><strong style="color:${d.color};font-size:${isMobile ? '13px' : '18px'};">${d.name}</strong></div>`
               return el
             }}
           />

@@ -37,8 +37,9 @@ function LoadingFallback() {
 export default function Home() {
   const { t } = useLanguage()
   return (
-    <div>
-      <SEO title="Codex Studio VE" description="Codex Studio VE: Desarrollo de software, apps web, ecommerce, APIs." />
+    <>
+      <SEO title="Codex Studio VE | Desarrollo Web Full-Stack & SEO | Latinoamérica" description="Codex Studio VE: Desarrollo de software, apps web, ecommerce, APIs, microservicios, edición de video, Discord y Minecraft. +100 proyectos, 7+ años de experiencia." />
+      <SEO title="Codex Studio | Desarrollo Web Full-Stack & SEO | Latinoamérica" description="Codex Studio: Desarrollo de software, apps web, ecommerce, APIs, microservicios, edición de video, Discord y Minecraft. +100 proyectos, 5+ años de experiencia." />
       <OrganizationSchema />
       <WebSiteSchema />
       <CursorGlow />
@@ -55,6 +56,27 @@ export default function Home() {
           <PageDivider variant="glow" />
           <AboutUs />
           <CarlosRomero />
+          <PageDivider variant="default" />
+          <VideoEditing />
+          <PageDivider variant="glow" />
+          <DiscordConfig />
+          <PageDivider variant="minimal" />
+          <MinecraftServers />
+          <PageDivider variant="default" />
+          <Testimonials />
+          <PageDivider variant="glow" />
+          <Brands />
+          <PageDivider variant="minimal" />
+          <PaymentMethods />
+          <PageDivider variant="default" />
+        </Suspense>
+        <SecurePayments />
+        <PageDivider variant="glow" />
+        <GlobalPresence />
+        <PageDivider variant="minimal" />
+        <Suspense fallback={<LoadingFallback />}>
+          <CTASection />
+          <PageDivider variant="default" />
           <PageDivider variant="minimal" />
           <VideoEditing />
           <PageDivider variant="default" />
@@ -67,16 +89,20 @@ export default function Home() {
           <Brands />
           <PageDivider variant="glow" />
           <PaymentMethods />
+          <PageDivider variant="minimal" />
         </Suspense>
         <SecurePayments />
+        <PageDivider variant="default" />
         <GlobalPresence />
+        <PageDivider variant="glow" />
         <Suspense fallback={<LoadingFallback />}>
           <CTASection />
+          <PageDivider variant="minimal" />
           <Contact />
         </Suspense>
       </main>
       <BackToTop />
       <Footer />
-    </div>
+    </>
   )
 }

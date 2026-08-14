@@ -1,4 +1,42 @@
 ﻿User-agent: *
 Allow: /
 Disallow: /api/
+<<<<<<< HEAD
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Googlebot-News
+Allow: /
+
+User-agent: Googlebot-Video
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+Sitemap: https://www.codexstudiove.com/sitemap.xml
+=======
 Sitemap: https://codexstudiove.com/sitemap.xml
+>>>>>>> 772f8e56fd7f88eb5aa2f75591854e5a0e85ec3a

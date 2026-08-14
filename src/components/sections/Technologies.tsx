@@ -1,3 +1,4 @@
+﻿ï»¿import React, { useState, useEffect } from 'react';
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { useLanguage } from '../../i18n/LanguageContext';
@@ -33,7 +34,7 @@ const categories: Category[] = [
         icon: '/tech-icons/HTML5.svg', 
         color: '#E34F26', 
         type: 'code', 
-        snippet: '<!DOCTYPE html>\n<html lang="es">\n<head>\n  <meta charset="UTF-8">\n  <title>Codex Studio</title>\n</head>\n<body>\n  <h1>¡Dominio de HTML5 Semántico!</h1>\n</body>\n</html>' 
+        snippet: '<!DOCTYPE html>\n<html lang="es">\n<head>\n  <meta charset="UTF-8">\n  <title>Codex Studio</title>\n</head>\n<body>\n  <h1>Â¡Dominio de HTML5 SemÃ¡ntico!</h1>\n</body>\n</html>' 
       },
       { 
         id: 'css', 
@@ -65,7 +66,7 @@ const categories: Category[] = [
         icon: '/tech-icons/Next.js.svg', 
         color: '#FFFFFF', 
         type: 'terminal', 
-        snippet: '$ npx create-next-app@latest --typescript --tailwind --app\n\nCreating a next generation Next.js application...\n✓ Selected Tailwind CSS\n✓ Configured App Router\n✓ Successfully initialized SEO structure!' 
+        snippet: '$ npx create-next-app@latest --typescript --tailwind --app\n\nCreating a next generation Next.js application...\nâœ“ Selected Tailwind CSS\nâœ“ Configured App Router\nâœ“ Successfully initialized SEO structure!' 
       },
       { 
         id: 'vuejs', 
@@ -81,7 +82,7 @@ const categories: Category[] = [
         icon: 'https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/angular/angular-original.svg', 
         color: '#DD0031', 
         type: 'code', 
-        snippet: 'import { Component } from "@angular/core";\n\n@Component({\n  selector: "app-root",\n  template: "<h1>¡Sistemas Angular Empresariales!</h1>",\n  styleUrls: ["./app.component.css"]\n})\nexport class AppComponent {}' 
+        snippet: 'import { Component } from "@angular/core";\n\n@Component({\n  selector: "app-root",\n  template: "<h1>Â¡Sistemas Angular Empresariales!</h1>",\n  styleUrls: ["./app.component.css"]\n})\nexport class AppComponent {}' 
       },
       { 
         id: 'threejs', 
@@ -120,7 +121,7 @@ const categories: Category[] = [
         icon: '/tech-icons/Python.svg', 
         color: '#3776AB', 
         type: 'code', 
-        snippet: 'def process_data(payload):\n    """Procesa peticiones pesadas asíncronas"""\n    print(f"Procesando: {payload}")\n    return {"status": "success", "performance": "optimal"}\n\nprocess_data("SEO Schema Engine")' 
+        snippet: 'def process_data(payload):\n    """Procesa peticiones pesadas asÃ­ncronas"""\n    print(f"Procesando: {payload}")\n    return {"status": "success", "performance": "optimal"}\n\nprocess_data("SEO Schema Engine")' 
       },
       { 
         id: 'php', 
@@ -191,7 +192,7 @@ const categories: Category[] = [
         icon: '/tech-icons/Firebase.svg', 
         color: '#FFCA28', 
         type: 'terminal', 
-        snippet: '$ firebase init firestore\n\n? What file should be used for Firestore Rules? firestore.rules\n? What file should be used for Firestore indexes? firestore.indexes.json\n\n✔ Firebase initialization complete!' 
+        snippet: '$ firebase init firestore\n\n? What file should be used for Firestore Rules? firestore.rules\n? What file should be used for Firestore indexes? firestore.indexes.json\n\nâœ” Firebase initialization complete!' 
       },
       { 
         id: 'sqlite', 
@@ -262,7 +263,7 @@ const categories: Category[] = [
         icon: 'https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/googlecloud/googlecloud-original.svg', 
         color: '#4285F4', 
         type: 'terminal', 
-        snippet: '$ gcloud run deploy codex-production --source .\n\nBuilding Container image...\nDeploying revision to Cloud Run...\n✔ Service [codex-production] has been deployed. Active!' 
+        snippet: '$ gcloud run deploy codex-production --source .\n\nBuilding Container image...\nDeploying revision to Cloud Run...\nâœ” Service [codex-production] has been deployed. Active!' 
       },
       { 
         id: 'azure', 
@@ -309,7 +310,7 @@ const categories: Category[] = [
         icon: 'https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/figma/figma-original.svg', 
         color: '#F24E1E', 
         type: 'code', 
-        snippet: '// Exportando Frames de Figma vía API REST\nconst response = await fetch("https://api.figma.com/v1/images/" + FILE_KEY, {\n  headers: { "X-Figma-Token": FIGMA_PERSONAL_TOKEN }\n});\nconst data = await response.json();' 
+        snippet: '// Exportando Frames de Figma vÃ­a API REST\nconst response = await fetch("https://api.figma.com/v1/images/" + FILE_KEY, {\n  headers: { "X-Figma-Token": FIGMA_PERSONAL_TOKEN }\n});\nconst data = await response.json();' 
       },
       { 
         id: 'postman', 
@@ -317,7 +318,7 @@ const categories: Category[] = [
         icon: 'https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/postman/postman-original.svg', 
         color: '#FF6C37', 
         type: 'code', 
-        snippet: '// Tests de Automatización de APIs en Postman\npm.test("La respuesta es rápida", function () {\n    pm.expect(pm.response.responseTime).to.be.below(150);\n});\npm.test("Header Canonical presente", function () {\n    pm.response.to.have.header("Link");\n});' 
+        snippet: '// Tests de AutomatizaciÃ³n de APIs en Postman\npm.test("La respuesta es rÃ¡pida", function () {\n    pm.expect(pm.response.responseTime).to.be.below(150);\n});\npm.test("Header Canonical presente", function () {\n    pm.response.to.have.header("Link");\n});' 
       },
       { 
         id: 'git', 
@@ -349,7 +350,7 @@ const categories: Category[] = [
         icon: 'https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/npm/npm-original-wordmark.svg', 
         color: '#CB3837', 
         type: 'terminal', 
-        snippet: '$ npm run build\n\n> codex-studio@2.5.0 build\n> vite build\n\n✓ 156 modules transformed.\ndist/index.html                     4.12 kB\ndist/assets/index-b4f7e9da.js    342.15 kB' 
+        snippet: '$ npm run build\n\n> codex-studio@2.5.0 build\n> vite build\n\nâœ“ 156 modules transformed.\ndist/index.html                     4.12 kB\ndist/assets/index-b4f7e9da.js    342.15 kB' 
       }
     ]
   },
@@ -364,7 +365,7 @@ const categories: Category[] = [
         icon: 'https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/nginx/nginx-original.svg', 
         color: '#009639', 
         type: 'code', 
-        snippet: 'server {\n    listen 80;\n    server_name www.codexstudiove.com;\n    return 301 https://codexstudiove.com$request_uri;\n}\n\n# Redirección canónica perfecta y segura configurada.' 
+        snippet: 'server {\n    listen 80;\n    server_name www.codexstudiove.com;\n    return 301 https://codexstudiove.com$request_uri;\n}\n\n# RedirecciÃ³n canÃ³nica perfecta y segura configurada.' 
       },
       { 
         id: 'redis', 
@@ -412,7 +413,7 @@ const categories: Category[] = [
         icon: 'https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/prometheus/prometheus-original.svg', 
         color: '#E6522C', 
         type: 'code', 
-        snippet: '# Configuración de rastreo de objetivos\nscrape_configs:\n  - job_name: \'codex-backend\'\n    scrape_interval: 10s\n    static_configs:\n      - targets: [\'localhost:3000\']' 
+        snippet: '# ConfiguraciÃ³n de rastreo de objetivos\nscrape_configs:\n  - job_name: \'codex-backend\'\n    scrape_interval: 10s\n    static_configs:\n      - targets: [\'localhost:3000\']' 
       }
     ]
   }
@@ -483,10 +484,10 @@ export default function Technologies() {
           className="text-center mb-10 md:mb-14"
         >
           <h2 className="text-3xl md:text-5xl font-bold mb-4 font-sans text-white tracking-tight">
-            {t('tech.title') || (lang === 'es' ? 'Especialización' : 'Specialization')}
+            {t('tech.title') || (lang === 'es' ? 'EspecializaciÃ³n' : 'Specialization')}
           </h2>
           <p className="text-gray-400 text-base md:text-lg max-w-2xl mx-auto font-sans leading-relaxed">
-            {t('tech.desc') || (lang === 'es' ? 'Habilidades de nivel Senior respaldadas por años de experiencia.' : 'Senior-level skills backed by years of hands-on experience.')}
+            {t('tech.desc') || (lang === 'es' ? 'Habilidades de nivel Senior respaldadas por aÃ±os de experiencia.' : 'Senior-level skills backed by years of hands-on experience.')}
           </p>
         </motion.div>
 
@@ -517,8 +518,6 @@ export default function Technologies() {
                 );
               })}
             </div>
-          </div>
-        </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12 items-start overflow-visible">
           
@@ -530,7 +529,7 @@ export default function Technologies() {
                   {lang === 'es' ? `Stack de ${currentCategory.title[lang]}` : `${currentCategory.title[lang]} Stack`}
                 </h3>
                 <span className="text-xs text-brand-pink font-mono font-medium">
-                  {lang === 'es' ? `${currentCategory.techs.length} tecnologías` : `${currentCategory.techs.length} technologies`}
+                  {lang === 'es' ? `${currentCategory.techs.length} tecnologÃ­as` : `${currentCategory.techs.length} technologies`}
                 </span>
               </div>
 
@@ -612,7 +611,6 @@ export default function Technologies() {
                                 }}
                               />
                             </div>
-                          </div>
 
                           {/* Text label inside the card */}
                           <span className="mt-2 text-[9px] xs:text-[10px] sm:text-xs font-semibold text-zinc-400 group-hover:text-white transition-colors text-center leading-tight whitespace-normal max-w-full h-5 flex items-center justify-center px-0.5 z-10 select-none">
@@ -624,8 +622,6 @@ export default function Technologies() {
                   </motion.div>
                 </AnimatePresence>
               </div>
-            </div>
-          </div>
 
           {/* Interactive Code/Terminal Preview Panel (Right Column) with fixed circular border-radius container */}
           <div className="lg:col-span-3 h-full min-h-[420px] lg:sticky lg:top-24 overflow-visible">
@@ -652,7 +648,6 @@ export default function Technologies() {
                           : 'sh'}
                       </span>
                    </div>
-                 </div>
                  
                  {/* Mini logo inside editor header */}
                  <div className="flex items-center gap-2 shrink-0 overflow-visible">
@@ -669,8 +664,6 @@ export default function Technologies() {
                    <div className="text-[10px] text-zinc-600 font-mono tracking-wider uppercase hidden sm:block select-none">
                      {lang === 'es' ? `EDITOR DE ${activeTech.type.toUpperCase()}` : `${activeTech.type.toUpperCase()} EDITOR`}
                    </div>
-                 </div>
-               </div>
 
                {/* Editor Content with Typewriter */}
                <div className="flex-1 p-6 relative font-mono text-sm sm:text-base selection:bg-brand-pink/20 overflow-auto min-h-[300px] [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar]:h-1.5 [&::-webkit-scrollbar-thumb]:bg-zinc-800 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-track]:bg-transparent">
@@ -686,7 +679,6 @@ export default function Technologies() {
                      <span className="inline-block w-[2px] h-4 sm:h-5 ml-1 bg-brand-pink align-middle animate-pulse"></span>
                    </pre>
                  </div>
-               </div>
 
                {/* VSCode-style Statusbar with bottom rounded borders */}
                <div className="h-8 bg-zinc-950 px-4 flex items-center justify-between text-[10px] sm:text-xs text-zinc-500 font-mono border-t border-zinc-900 rounded-b-2xl select-none shrink-0 overflow-hidden">
@@ -706,12 +698,10 @@ export default function Technologies() {
                      {lang === 'es' ? activeTech.name : `${activeTech.name} Env`}
                    </span>
                  </div>
-               </div>
              </motion.div>
           </div>
 
         </div>
-      </div>
     </section>
   );
 }

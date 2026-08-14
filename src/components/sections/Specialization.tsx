@@ -161,7 +161,6 @@ export default function Specialization() {
                 )
               })}
             </div>
-          </div>
           <div className="lg:col-span-3 lg:sticky lg:top-24">
             <div className="bg-[#0A0A0A] border border-[#111111] rounded-2xl overflow-hidden shadow-2xl">
               <div className="h-12 bg-[#0A0A0A] border-b border-zinc-900 flex items-center px-4 gap-3">
@@ -176,10 +175,6 @@ export default function Specialization() {
                 <div className="flex items-center gap-3 text-zinc-500"><span className="flex items-center gap-1"><i className="fa-brands fa-git-alt text-brand-pink"></i> main*</span></div>
                 <div className="flex items-center gap-3 text-zinc-600"><span>UTF-8</span><span>{activeTech?.name || 'React'} Env</span></div>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </section>
   )
 }
