@@ -12,6 +12,7 @@ const Services = lazy(() => import('../components/sections/Services'))
 const StatsCounter = lazy(() => import('../components/sections/StatsCounter'))
 const Specialization = lazy(() => import('../components/sections/Specialization'))
 const AboutUs = lazy(() => import('../components/sections/AboutUs'))
+const CarlosRomero = lazy(() => import('../components/sections/CarlosRomero'))
 const VideoEditing = lazy(() => import('../components/sections/VideoEditing'))
 const DiscordConfig = lazy(() => import('../components/sections/DiscordConfig'))
 const MinecraftServers = lazy(() => import('../components/sections/MinecraftServers'))
@@ -37,7 +38,7 @@ export default function Home() {
   const { t } = useLanguage()
   return (
     <>
-      <SEO title="Codex Studio | Desarrollo Web Full-Stack & SEO | Latinoamérica" description="Codex Studio: Desarrollo de software, apps web, ecommerce, APIs, microservicios, edición de video, Discord y Minecraft. +100 proyectos, 5+ años de experiencia." />
+      <SEO title="Codex Studio VE | Desarrollo Web Full-Stack & SEO | Latinoamérica" description="Codex Studio VE: Desarrollo de software, apps web, ecommerce, APIs, microservicios, edición de video, Discord y Minecraft. +100 proyectos, 7+ años de experiencia." />
       <OrganizationSchema />
       <WebSiteSchema />
       <CursorGlow />
@@ -53,27 +54,28 @@ export default function Home() {
           <Specialization />
           <PageDivider variant="glow" />
           <AboutUs />
-          <PageDivider variant="minimal" />
+          <CarlosRomero />
+          <PageDivider variant="default" />
           <VideoEditing />
-          <PageDivider variant="default" />
+          <PageDivider variant="glow" />
           <DiscordConfig />
-          <PageDivider variant="glow" />
+          <PageDivider variant="minimal" />
           <MinecraftServers />
-          <PageDivider variant="minimal" />
-          <Testimonials />
           <PageDivider variant="default" />
-          <Brands />
+          <Testimonials />
           <PageDivider variant="glow" />
-          <PaymentMethods />
+          <Brands />
           <PageDivider variant="minimal" />
+          <PaymentMethods />
+          <PageDivider variant="default" />
         </Suspense>
         <SecurePayments />
-        <PageDivider variant="default" />
-        <GlobalPresence />
         <PageDivider variant="glow" />
+        <GlobalPresence />
+        <PageDivider variant="minimal" />
         <Suspense fallback={<LoadingFallback />}>
           <CTASection />
-          <PageDivider variant="minimal" />
+          <PageDivider variant="default" />
           <Contact />
         </Suspense>
       </main>

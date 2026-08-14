@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { motion } from 'motion/react';
 import { useLanguage } from '../../i18n/LanguageContext';
 import InViewSEO from '../InViewSEO';

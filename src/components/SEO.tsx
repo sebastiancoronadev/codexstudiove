@@ -24,7 +24,7 @@ export default function SEO({
   keywords = '',
   publishedTime,
   modifiedTime,
-  author = 'Sebastián Corona',
+  author = 'Sebasti�n Corona',
   section,
   tags = []
 }: SEOProps) {
@@ -33,13 +33,13 @@ export default function SEO({
   const url = `${baseUrl}${path}`
   const fullImage = image.startsWith('http') ? image : `${baseUrl}${image}`
   
-  const defaultKeywords = 'desarrollo web, aplicaciones web, SEO, React, Node.js, Python, full-stack, Venezuela, Latinoamérica, programador, diseño web, marketing digital, ecommerce, PWA, microservicios, cloud computing'
+  const defaultKeywords = 'desarrollo web, aplicaciones web, SEO, React, Node.js, Python, full-stack, Venezuela, Latinoam�rica, programador, dise�o web, marketing digital, ecommerce, PWA, microservicios, cloud computing'
   const finalKeywords = keywords ? `${keywords}, ${defaultKeywords}` : defaultKeywords
 
   return (
     <Helmet>
-      {/* Básico */}
-      <title>{title} | Codex Studio</title>
+      {/* B�sico */}
+      <title>{title} | Codex Studio VE</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={finalKeywords} />
       <meta name="author" content={author} />
@@ -52,19 +52,19 @@ export default function SEO({
       {/* Open Graph */}
       <meta property="og:locale" content={lang === 'es' ? 'es_VE' : lang === 'en' ? 'en_US' : lang === 'zh' ? 'zh_CN' : 'ja_JP'} />
       <meta property="og:type" content={type} />
-      <meta property="og:title" content={`${title} | Codex Studio`} />
+      <meta property="og:title" content={`${title} | Codex Studio VE`} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={fullImage} />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
       <meta property="og:url" content={url} />
-      <meta property="og:site_name" content="Codex Studio" />
+      <meta property="og:site_name" content="Codex Studio VE" />
       
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:site" content="@codexstudio" />
       <meta name="twitter:creator" content="@sebastiancorona" />
-      <meta name="twitter:title" content={`${title} | Codex Studio`} />
+      <meta name="twitter:title" content={`${title} | Codex Studio VE`} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={fullImage} />
       
@@ -100,7 +100,7 @@ export default function SEO({
       <meta name="DC.description" content={description} />
       <meta name="DC.creator" content={author} />
       <meta name="DC.language" content={lang} />
-      <meta name="DC.publisher" content="Codex Studio" />
+      <meta name="DC.publisher" content="Codex Studio VE" />
     </Helmet>
   )
 }

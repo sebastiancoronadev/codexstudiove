@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import SEO from './SEO';
 import { useLanguage } from '../i18n/LanguageContext';
 
