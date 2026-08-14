@@ -27,11 +27,6 @@ export default function Trust() {
   // Carousel items duplicated for seamless infinite scrolling
   const carouselItems = [
     ...clients,
-    ...clients,
-    ...clients,
-    ...clients,
-    ...clients,
-    ...clients,
   ];
 
   return (
@@ -78,8 +73,6 @@ export default function Trust() {
               </div>
             ))}
           </div>
-        </div>
-      </div>
     </section>
   );
 }

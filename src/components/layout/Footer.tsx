@@ -27,7 +27,6 @@ export default function Footer() {
                 </a>
               ))}
             </div>
-          </div>
 
           <div>
             <h3 className="text-white font-semibold mb-4">{t('footer.contact')}</h3>
@@ -44,8 +43,6 @@ export default function Footer() {
                 <i className="fa-solid fa-location-dot text-brand-pink"></i>
                 <span>{t('footer.location')}</span>
               </div>
-            </div>
-          </div>
 
           <div>
             <h3 className="text-white font-semibold mb-4">{t('footer.legal')}</h3>
@@ -67,13 +64,10 @@ export default function Footer() {
                 <span className="group-hover:translate-x-1 transition-transform">➜</span> {t('footer.privacy')}
               </Link>
             </div>
-          </div>
-        </div>
 
         <div className="mt-12 pt-8 border-t border-zinc-900 text-center">
           <p className="text-zinc-600 text-sm">{t('footer.copyright')}</p>
         </div>
-      </div>
     </footer>
   )
 }

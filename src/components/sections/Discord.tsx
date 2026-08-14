@@ -65,7 +65,6 @@ export default function Discord() {
             </motion.div>
           ))}
         </div>
-      </div>
     </section>
   );
 }

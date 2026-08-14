@@ -33,8 +33,6 @@ export default function Terminos() {
             <p>Email: contacto@codexstudiove.com | Discord: sebmaster09</p>
             <Link to="/" className="inline-block mt-8 px-6 py-3 bg-gradient-to-r from-brand-pink to-brand-orange text-white font-semibold rounded-full hover:shadow-lg transition-all">Volver a la Web</Link>
           </div>
-        </div>
-      </div>
       <Footer />
     </>
   )

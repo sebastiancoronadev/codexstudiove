@@ -95,7 +95,6 @@ export default function GlobalPresence() {
             }}
           />
         </div>
-      </div>
     </section>
   )
 }

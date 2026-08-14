@@ -60,7 +60,6 @@ export default function VideoEditing() {
           <a href="#contact" className="px-8 py-4 bg-gradient-to-r from-brand-pink to-brand-orange text-white font-semibold rounded-full text-center hover:shadow-lg hover:shadow-brand-pink/25 transition-all transform hover:scale-105">{t('video.cta')}</a>
           <a href="#contact" className="px-8 py-4 border border-zinc-700 text-white font-semibold rounded-full text-center hover:border-brand-pink/50 hover:bg-brand-pink/10 transition-all">{t('video.budget')}</a>
         </div>
-      </div>
     </section>
   )
 }

@@ -8,7 +8,6 @@
         <div className="absolute inset-0 flex items-center">
           <div className="w-full h-px bg-gradient-to-r from-transparent via-brand-orange/30 to-transparent blur-sm"></div>
         </div>
-      </div>
     )
   }
 
@@ -18,7 +17,6 @@
         <div className="max-w-7xl mx-auto px-4">
           <div className="w-full h-px bg-zinc-900"></div>
         </div>
-      </div>
     )
   }
 
@@ -45,7 +43,6 @@
         <div className="absolute inset-0 flex items-center">
           <div className="w-full h-px bg-gradient-to-r from-transparent via-zinc-800 to-transparent transform -skew-y-3"></div>
         </div>
-      </div>
     )
   }
 
@@ -54,6 +51,5 @@
       <div className="absolute inset-0 flex items-center">
         <div className="w-full h-px bg-gradient-to-r from-transparent via-zinc-800 to-transparent"></div>
       </div>
-    </div>
   )
 }

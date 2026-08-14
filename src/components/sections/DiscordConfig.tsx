@@ -43,7 +43,6 @@ export default function DiscordConfig() {
         <div className="text-center">
           <a href="#contact" className="px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-500 text-white font-semibold rounded-full hover:shadow-lg transition-all inline-block">{t('discord.title')}</a>
         </div>
-      </div>
     </section>
   )
 }

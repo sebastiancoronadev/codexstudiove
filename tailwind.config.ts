@@ -12,7 +12,6 @@ export default {
           cyan: '#00F0FF',
           gold: '#FFD700',
         },
-      },
       fontFamily: {
         sans: ['Sora', 'ui-sans-serif', 'system-ui', 'sans-serif'],
         mono: ['Space Mono', 'ui-monospace', 'SFMono-Regular', 'monospace'],
@@ -65,11 +64,8 @@ export default {
           '0%, 100%': { boxShadow: '0 0 20px rgba(255, 0, 127, 0.4)' },
           '50%': { boxShadow: '0 0 40px rgba(255, 0, 127, 0.8)' },
         },
-      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
       },
-    },
-  },
   plugins: [],
 } satisfies Config

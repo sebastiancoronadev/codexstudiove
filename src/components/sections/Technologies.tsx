@@ -518,8 +518,6 @@ export default function Technologies() {
                 );
               })}
             </div>
-          </div>
-        </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12 items-start overflow-visible">
           
@@ -613,7 +611,6 @@ export default function Technologies() {
                                 }}
                               />
                             </div>
-                          </div>
 
                           {/* Text label inside the card */}
                           <span className="mt-2 text-[9px] xs:text-[10px] sm:text-xs font-semibold text-zinc-400 group-hover:text-white transition-colors text-center leading-tight whitespace-normal max-w-full h-5 flex items-center justify-center px-0.5 z-10 select-none">
@@ -625,8 +622,6 @@ export default function Technologies() {
                   </motion.div>
                 </AnimatePresence>
               </div>
-            </div>
-          </div>
 
           {/* Interactive Code/Terminal Preview Panel (Right Column) with fixed circular border-radius container */}
           <div className="lg:col-span-3 h-full min-h-[420px] lg:sticky lg:top-24 overflow-visible">
@@ -653,7 +648,6 @@ export default function Technologies() {
                           : 'sh'}
                       </span>
                    </div>
-                 </div>
                  
                  {/* Mini logo inside editor header */}
                  <div className="flex items-center gap-2 shrink-0 overflow-visible">
@@ -670,8 +664,6 @@ export default function Technologies() {
                    <div className="text-[10px] text-zinc-600 font-mono tracking-wider uppercase hidden sm:block select-none">
                      {lang === 'es' ? `EDITOR DE ${activeTech.type.toUpperCase()}` : `${activeTech.type.toUpperCase()} EDITOR`}
                    </div>
-                 </div>
-               </div>
 
                {/* Editor Content with Typewriter */}
                <div className="flex-1 p-6 relative font-mono text-sm sm:text-base selection:bg-brand-pink/20 overflow-auto min-h-[300px] [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar]:h-1.5 [&::-webkit-scrollbar-thumb]:bg-zinc-800 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-track]:bg-transparent">
@@ -687,7 +679,6 @@ export default function Technologies() {
                      <span className="inline-block w-[2px] h-4 sm:h-5 ml-1 bg-brand-pink align-middle animate-pulse"></span>
                    </pre>
                  </div>
-               </div>
 
                {/* VSCode-style Statusbar with bottom rounded borders */}
                <div className="h-8 bg-zinc-950 px-4 flex items-center justify-between text-[10px] sm:text-xs text-zinc-500 font-mono border-t border-zinc-900 rounded-b-2xl select-none shrink-0 overflow-hidden">
@@ -707,12 +698,10 @@ export default function Technologies() {
                      {lang === 'es' ? activeTech.name : `${activeTech.name} Env`}
                    </span>
                  </div>
-               </div>
              </motion.div>
           </div>
 
         </div>
-      </div>
     </section>
   );
 }

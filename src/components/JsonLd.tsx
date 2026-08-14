@@ -60,7 +60,6 @@ export function OrganizationSchema() {
         { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'UI/UX Design', description: 'Diseño de interfaces centradas en el usuario con Figma y prototipado interactivo.' } }
       ]
     }
-  }
 
   return (
     <Helmet>
@@ -123,5 +122,4 @@ export function FAQSchema({ questions }: { questions: Array<{ question: string; 
       <script type="application/ld+json">{JSON.stringify(schema)}</script>
     </Helmet>
   )
-}
 }

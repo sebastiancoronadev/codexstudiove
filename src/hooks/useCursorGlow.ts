@@ -16,7 +16,6 @@ export function useCursorGlow() {
       } else {
         setIsHovering(false)
       }
-    }
 
     window.addEventListener('mousemove', handleMouseMove)
     window.addEventListener('mouseover', handleMouseOver)

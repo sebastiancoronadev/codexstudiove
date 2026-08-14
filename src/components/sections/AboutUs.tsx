@@ -66,11 +66,8 @@ export default function AboutUs() {
                   <img src="/images/sebastian-corona.png" alt="Sebastián Ernesto Corona Bencomo - Senior Full-Stack Developer" className="w-full h-auto object-contain object-bottom" style={{ filter: 'drop-shadow(0 15px 30px rgba(0,0,0,0.4))' }} />
                   <img src="/images/sebastian-corona.png" alt="Sebastián Corona" className="w-full h-auto object-contain object-bottom" style={{ filter: 'drop-shadow(0 15px 30px rgba(0,0,0,0.4))' }} />
                 </div>
-              </div>
-            </div>
           </motion.div>
         </div>
-      </div>
     </section>
   )
 }

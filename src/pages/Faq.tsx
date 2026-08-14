@@ -49,11 +49,8 @@ export default function Faq() {
                     </div>)
                   })}
                 </div>
-              </div>
             ))}
           </div>
-        </div>
-      </div>
       <Footer />
     </>
   )

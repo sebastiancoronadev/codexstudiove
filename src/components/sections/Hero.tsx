@@ -36,7 +36,6 @@ export default function Hero() {
           <span>{t('hero.discover')}</span>
           <i className="fa-solid fa-chevron-down"></i>
         </motion.div>
-      </motion.div>
     </section>
   )
 }

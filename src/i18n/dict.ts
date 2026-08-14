@@ -101,7 +101,6 @@ export interface Dictionary {
       discord: string
       minecraft: string
     }
-  }
   contact: {
     title: string
     subtitle: string
@@ -124,7 +123,6 @@ export interface Dictionary {
     privacy: string
     copyright: string
   }
-}
 
 export const dictionaries: Record<Language, Dictionary> = {
   es: {
@@ -213,7 +211,6 @@ export const dictionaries: Record<Language, Dictionary> = {
     contact: { title: 'お問い合わせ', subtitle: 'プロジェクトを始める準備はできましたか？', name: '氏名 *', email: 'メールアドレス *', phone: '電話番号', projectType: 'プロジェクトタイプ *', details: 'プロジェクト詳細 *', submit: 'リクエストを送信', select: '選択してください' },
     footer: { description: 'アイデアをデジタルの現実に。', contact: 'お問い合わせ', email: 'contacto@codexstudiove.com', phone: 'なし', location: 'ベネズエラ、バレンシア', legal: '法的情報', terms: '利用規約', faq: 'よくある質問', privacy: 'プライバシーポリシー', copyright: '© 2026 Codex。全著作権所有。' }
   }
-}
     nav: {
       home: 'Inicio',
       services: 'Servicios',
@@ -680,5 +677,3 @@ export const dictionaries: Record<Language, Dictionary> = {
       privacy: 'プライバシーポリシー',
       copyright: '© 2026 Codex。全著作権所有。'
     }
-  }
-}
