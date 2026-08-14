@@ -12,6 +12,7 @@ const Services = lazy(() => import('../components/sections/Services'))
 const StatsCounter = lazy(() => import('../components/sections/StatsCounter'))
 const Specialization = lazy(() => import('../components/sections/Specialization'))
 const AboutUs = lazy(() => import('../components/sections/AboutUs'))
+const CarlosRomero = lazy(() => import('../components/sections/CarlosRomero'))
 const VideoEditing = lazy(() => import('../components/sections/VideoEditing'))
 const DiscordConfig = lazy(() => import('../components/sections/DiscordConfig'))
 const MinecraftServers = lazy(() => import('../components/sections/MinecraftServers'))
@@ -36,8 +37,8 @@ function LoadingFallback() {
 export default function Home() {
   const { t } = useLanguage()
   return (
-    <>
-      <SEO title="Codex Studio | Desarrollo Web Full-Stack & SEO | Latinoamérica" description="Codex Studio: Desarrollo de software, apps web, ecommerce, APIs, microservicios, edición de video, Discord y Minecraft. +100 proyectos, 5+ años de experiencia." />
+    <div>
+      <SEO title="Codex Studio VE" description="Codex Studio VE: Desarrollo de software, apps web, ecommerce, APIs." />
       <OrganizationSchema />
       <WebSiteSchema />
       <CursorGlow />
@@ -53,6 +54,7 @@ export default function Home() {
           <Specialization />
           <PageDivider variant="glow" />
           <AboutUs />
+          <CarlosRomero />
           <PageDivider variant="minimal" />
           <VideoEditing />
           <PageDivider variant="default" />
@@ -65,20 +67,16 @@ export default function Home() {
           <Brands />
           <PageDivider variant="glow" />
           <PaymentMethods />
-          <PageDivider variant="minimal" />
         </Suspense>
         <SecurePayments />
-        <PageDivider variant="default" />
         <GlobalPresence />
-        <PageDivider variant="glow" />
         <Suspense fallback={<LoadingFallback />}>
           <CTASection />
-          <PageDivider variant="minimal" />
           <Contact />
         </Suspense>
       </main>
       <BackToTop />
       <Footer />
-    </>
+    </div>
   )
 }

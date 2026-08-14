@@ -10,7 +10,7 @@ export default function Footer() {
     { name: 'X', url: '', icon: 'fa-brands fa-x-twitter' },
     { name: 'YouTube', url: 'https://youtube.com/@codexstudiove', icon: 'fa-brands fa-youtube' },
     { name: 'Discord', url: 'https://discord.gg/793142687858950144', icon: 'fa-brands fa-discord' },
-    { name: 'Reddit', url: 'https://reddit.com/r/codexstudiove', icon: 'fa-brands fa-reddit' },
+    { name: 'Reddit', url: 'https://reddit.com/r/sebastiancoronadev', icon: 'fa-brands fa-reddit' },
   ]
 
   return (
@@ -69,3 +69,4 @@ export default function Footer() {
     </footer>
   )
 }
+

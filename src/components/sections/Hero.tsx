@@ -5,7 +5,7 @@ export default function Hero() {
   const { t } = useLanguage()
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center bg-black overflow-hidden">
+    <section id="home" className="relative min-h-screen flex items-center justify-center pt-20 md:pt-0 bg-black overflow-hidden">
       <div className="absolute inset-0 bg-ambient-glow-top"></div>
       <div className="absolute inset-0 bg-grid"></div>
       
@@ -14,18 +14,18 @@ export default function Hero() {
 
       <div className="relative z-10 text-center px-4 max-w-5xl mx-auto pb-20">
         <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6">
+          <h1 className="text-3xl md:text-6xl lg:text-7xl font-bold mb-6">
             <span className="text-white">Transformando Ideas en </span>
             <span className="text-gradient">Realidad Digital</span>
           </h1>
         </motion.div>
 
         <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }}>
-          <p className="text-lg md:text-xl text-zinc-400 mb-10 max-w-3xl mx-auto leading-relaxed">{t('hero.description')}</p>
+          <p className="text-base md:text-xl text-zinc-400 mb-10 max-w-3xl mx-auto leading-relaxed">{t('hero.description')}</p>
         </motion.div>
 
         <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.4 }}>
-          <a href="#contact" className="px-8 py-4 bg-gradient-to-r from-brand-pink to-brand-orange text-white font-semibold rounded-full hover:shadow-lg hover:shadow-brand-pink/25 transition-all transform hover:scale-105 inline-block">
+          <a href="#contact" className="px-7 py-3.5 md:px-8 md:py-4 bg-gradient-to-r from-brand-pink to-brand-orange text-white font-semibold rounded-full hover:shadow-lg hover:shadow-brand-pink/25 transition-all transform hover:scale-105 inline-block">
             {t('hero.cta')}
           </a>
         </motion.div>
@@ -40,3 +40,6 @@ export default function Hero() {
     </section>
   )
 }
+
+
+
