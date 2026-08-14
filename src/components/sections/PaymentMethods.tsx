@@ -47,7 +47,6 @@ export default function PaymentMethods() {
               </div>
             ))}
           </div>
-        </div>
 
         <div className="relative overflow-hidden"
           style={{
@@ -61,8 +60,6 @@ export default function PaymentMethods() {
               </div>
             ))}
           </div>
-        </div>
-      </div>
     </section>
   )
 }

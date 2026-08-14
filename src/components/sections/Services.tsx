@@ -66,7 +66,6 @@ export default function Services() {
             </motion.div>
           ))}
         </div>
-      </div>
     </section>
   )
 }

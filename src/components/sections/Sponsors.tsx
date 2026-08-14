@@ -51,8 +51,6 @@ export default function Sponsors() {
                 <div className="w-12 h-12 bg-[#1A1A1A] rounded-lg flex items-center justify-center text-white/50 group-hover:text-[#FF6B00] transition-colors border border-gray-800">
                   <i className="fas fa-trophy"></i>
                 </div>
-              </div>
-            </div>
           </motion.div>
 
           <motion.div 
@@ -71,7 +69,6 @@ export default function Sponsors() {
             </div>
           </motion.div>
         </div>
-      </div>
     </section>
   );
 }

@@ -39,7 +39,6 @@ export default function StatsCounter() {
             </motion.div>
           ))}
         </div>
-      </div>
     </section>
   )
 }

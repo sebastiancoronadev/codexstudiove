@@ -17,7 +17,6 @@ export function CarlosRomeroSchema() {
     worksFor: {
       '@id': 'https://codexstudiove.com/#organization'
     }
-  }
 
   return (
     <Helmet>

@@ -54,7 +54,6 @@ export default function Header() {
               </button>
               <AnimatePresence>{langMenuOpen && (<motion.div initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }} className="absolute right-0 mt-2 w-40 bg-black/90 backdrop-blur-xl border border-zinc-800 rounded-xl overflow-hidden shadow-2xl">{languages.map(({ code, label, flag }) => (<button key={code} onClick={() => { setLang(code); setLangMenuOpen(false) }} className={`w-full px-4 py-2.5 text-sm text-left flex items-center gap-3 transition-all ${lang === code ? 'bg-brand-pink/20 text-white' : 'text-zinc-400 hover:text-white hover:bg-zinc-900/50'}`}><img src={flag} alt={label} className="w-5 h-4 object-cover rounded-sm" /><span>{label}</span></button>))}</motion.div>)}</AnimatePresence>
             </div>
-          </div>
           <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="md:hidden text-white p-2"><svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">{mobileMenuOpen ? (<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />) : (<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />)}</svg></button>
         </div>
         <AnimatePresence>{mobileMenuOpen && (<motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 'auto' }} exit={{ opacity: 0, height: 0 }} className="md:hidden bg-black/95 backdrop-blur-xl border-t border-zinc-800 rounded-b-2xl"><div className="py-4 space-y-1">

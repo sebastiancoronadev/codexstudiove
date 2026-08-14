@@ -44,8 +44,6 @@ export default function CarlosRomero() {
                 <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-[110%] z-10">
                   <img src="/images/carlos-romero.png" alt="Carlos Gabriel Romero Marín - Ejecutivo de Ventas" className="w-full h-auto object-contain object-bottom" style={{ filter: 'drop-shadow(0 15px 30px rgba(0,0,0,0.4))' }} />
                 </div>
-              </div>
-            </div>
           </motion.div>
           <motion.div initial={{ opacity: 0, x: 50 }} animate={inView ? { opacity: 1, x: 0 } : {}} transition={{ duration: 0.6, delay: 0.2 }} className="pb-0 md:pb-8 order-2 lg:order-2">
             <h2 className="text-2xl md:text-4xl font-bold mb-3 md:mb-6"><span className="text-gradient">{texts.title}</span></h2>
@@ -58,7 +56,6 @@ export default function CarlosRomero() {
             <motion.a whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} href="/cv/CV_Carlos_Romero.pdf" download className="px-5 md:px-6 py-2 md:py-3 bg-gradient-to-r from-brand-pink to-brand-orange text-white text-xs md:text-base font-semibold rounded-full text-center hover:shadow-lg transition-all inline-block"><i className="fa-solid fa-download mr-2"></i>{texts.cv}</motion.a>
           </motion.div>
         </div>
-      </div>
     </section>
   )
 }

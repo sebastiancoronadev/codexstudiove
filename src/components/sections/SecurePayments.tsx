@@ -97,20 +97,17 @@ export default function SecurePayments() {
                         {card.id === 5 && (<><div className="absolute inset-0 overflow-hidden rounded-2xl"><img src={card.background} alt="" className="absolute object-cover rotate-90 scale-[1.1]" style={{ minWidth: '330px', minHeight: '330px', marginLeft: '-58px', marginTop: '11px' }} /></div><div className="absolute inset-0 bg-black/5 rounded-2xl" /><img src="/images/card-textures/chip-texture.png" alt="" className="absolute bottom-[285px] right-[60px] w-10 h-8 object-contain rotate-90 rounded-[5px]" style={{ filter: 'grayscale(100%) brightness(1.3) contrast(1.2)', opacity: 0.9 }} /><div className="absolute bottom-[285px] right-[30px] w-8 h-8 rotate-90" style={{ backgroundColor: 'white', maskImage: 'url(/images/card-textures/conection-texture.png)', WebkitMaskImage: 'url(/images/card-textures/conection-texture.png)', maskSize: 'contain', WebkitMaskSize: 'contain', maskRepeat: 'no-repeat', WebkitMaskRepeat: 'no-repeat', maskPosition: 'center', WebkitMaskPosition: 'center' }} /><img src="/images/card-textures/brubank-texture.png" alt="" className="absolute bottom-4 left-4 w-24 object-contain brightness-0 invert drop-shadow-md" /><img src="/images/card-textures/visa-texture.png" alt="" className="absolute bottom-4 right-4 w-16 object-contain brightness-0 invert opacity-90" /></>)}
                         {card.id === 6 && (<><div className="absolute inset-0 bg-black/5 rounded-2xl" /><img src="/images/card-textures/zinli-texture.png" alt="" className="absolute bottom-[205px] left-5 w-32 object-contain drop-shadow-md" /><img src="/images/card-textures/chip-texture.png" alt="" className="absolute bottom-[285px] right-[60px] w-10 h-8 object-contain rotate-90 rounded-[5px]" style={{ filter: 'grayscale(100%) brightness(1.3) contrast(1.2)', opacity: 0.9 }} /><div className="absolute bottom-[285px] right-[30px] w-8 h-8 rotate-90" style={{ backgroundColor: '#32cd96', maskImage: 'url(/images/card-textures/conection-texture.png)', WebkitMaskImage: 'url(/images/card-textures/conection-texture.png)', maskSize: 'contain', WebkitMaskSize: 'contain', maskRepeat: 'no-repeat', WebkitMaskRepeat: 'no-repeat', maskPosition: 'center', WebkitMaskPosition: 'center' }} /><img src="/images/card-textures/visa-texture.png" alt="" className="absolute bottom-4 right-4 w-20 object-contain brightness-0 invert opacity-90" /></>)}
                       </div>
-                    </div>
                   </Tilt>
                 </motion.div>
               )
             })}
           </div>
-        </div>
 
         <div className="flex justify-center items-center gap-3 mt-6">
           {cards.map((_, index) => (
             <button key={index} onClick={() => { if (!isAnimating) setActive(index) }} className={`h-2.5 rounded-full transition-all duration-300 ${index === active ? 'bg-[#FF007F] w-8' : 'bg-white/20 hover:bg-white/40 w-2.5'}`} style={{ pointerEvents: 'auto' }} />
           ))}
         </div>
-      </div>
     </section>
   )
 }

@@ -18,7 +18,6 @@ export default function Thanks() {
             Volver al Inicio
           </Link>
         </div>
-      </div>
     </>
   )
 }

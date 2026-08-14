@@ -64,7 +64,6 @@ export default function Minecraft() {
             </motion.div>
           ))}
         </div>
-      </div>
     </section>
   );
 }

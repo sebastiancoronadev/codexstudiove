@@ -75,13 +75,8 @@ export default function Testimonials() {
                       <p className="text-white font-medium text-sm">{testimonial.name}</p>
                       <p className="text-zinc-500 text-xs">{testimonial.company}</p>
                     </div>
-                  </div>
-                </div>
-              </div>
             ))}
           </div>
-        </div>
-      </div>
     </section>
   )
 }
