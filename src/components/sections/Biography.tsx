@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { SectionTitle } from "@/components/ui/SectionTitle";
 import { useTranslation } from "@/lib/i18n/useTranslation";
+import { SSRPrerender } from "@/components/seo/SSRPrerender";
 
 interface BioPerson {
   name: string;
@@ -139,7 +140,38 @@ export function Biography() {
             );
           })}
         </div>
-      </div>
+      </div>      {/* SEO - Contenido SSR invisible para Google */}
+      <SSRPrerender id="biografia-seo-content" ariaLabel="Biografías completas del equipo Codex Studio VE">
+        <h2>Biografías del Equipo Codex Studio VE</h2>
+        {BIO_PEOPLE.map((person) => {
+          const role = t(`bio.${person.key}.role`) as string;
+          const highlights = t(`bio.${person.key}.highlights`) as string[];
+          const biography = t(`bio.${person.key}.biography`) as string;
+
+          return (
+            <article key={`seo-${person.key}`} itemScope itemType="https://schema.org/Person">
+              <h3 itemProp="name">{person.name}</h3>
+              <p itemProp="jobTitle">{role}</p>
+              <p>
+                <span itemProp="address" itemScope itemType="https://schema.org/PostalAddress">
+                  <span itemProp="addressLocality">{person.location}</span>
+                </span>
+              </p>
+              <ul>
+                {Array.isArray(highlights) &&
+                  highlights.map((h, i) => (
+                    <li key={i}>{h}</li>
+                  ))}
+              </ul>
+              <div itemProp="description">
+                {biography.split("\n\n").map((para, i) => (
+                  <p key={i}>{para}</p>
+                ))}
+              </div>
+            </article>
+          );
+        })}
+      </SSRPrerender>
 
       <AnimatePresence>
         {openIndex !== null && (

@@ -6,6 +6,7 @@ import { SectionTitle } from "@/components/ui/SectionTitle";
 import { GlowCard } from "@/components/ui/GlowCard";
 import { projects } from "@/lib/data/projects";
 import { useTranslation } from "@/lib/i18n/useTranslation";
+import { SSRPrerender } from "@/components/seo/SSRPrerender";
 
 export function Portfolio() {
   const { t } = useTranslation();
@@ -88,7 +89,36 @@ export function Portfolio() {
             </motion.div>
           ))}
         </div>
-      </div>
+      </div>      {/* SEO - Contenido SSR invisible para Google */}
+      <SSRPrerender id="portafolio-seo-content" ariaLabel="Proyectos completos de Codex Studio VE">
+        <h2>Proyectos Destacados de Codex Studio VE</h2>
+        {projects.map((project) => {
+          const short = t(project.descriptionKey) as string;
+          const long = t(project.longDescriptionKey) as string;
+
+          return (
+            <article key={`seo-${project.title}`} itemScope itemType="https://schema.org/CreativeWork">
+              <h3 itemProp="name">{project.title}</h3>
+              <p itemProp="abstract">{short}</p>
+              <div itemProp="description">
+                {long.split("\n\n").map((para, i) => (
+                  <p key={i}>{para}</p>
+                ))}
+              </div>
+              <ul>
+                {project.tech.map((tech, i) => (
+                  <li key={i}>{tech}</li>
+                ))}
+              </ul>
+              {project.url !== "#" && (
+                <a href={project.url} rel="noopener noreferrer">
+                  {project.url}
+                </a>
+              )}
+            </article>
+          );
+        })}
+      </SSRPrerender>
 
       <AnimatePresence>
         {openIndex !== null && (

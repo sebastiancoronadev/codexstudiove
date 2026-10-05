@@ -2,7 +2,6 @@
 import Image from "next/image";
 import { AnalogClock } from "@/components/ui/AnalogClock";
 import { useTranslation } from "@/lib/i18n/useTranslation";
-
 const socialLinks = [
   { name: "LinkedIn", icon: "bi-linkedin", url: "https://linkedin.com/in/sebastiancoronadev" },
   { name: "Reddit", icon: "bi-reddit", url: "https://reddit.com/user/sebastiancoronadev" },
@@ -38,22 +37,22 @@ export function Footer() {
             <ul className="space-y-3.5">
               <li>
                 <a href="tel:+584125008324" className="font-outfit text-[13px] font-light text-white/50 hover:text-pink-400 transition-colors flex items-center gap-2.5 justify-center md:justify-start">
-                  <i className="bi bi-telephone w-4" /> +58 412-5008324
+                  <i className="bi bi-telephone w-4" aria-hidden="true" /> +58 412-5008324
                 </a>
               </li>
               <li>
                 <a href="mailto:contacto@codexstudiove.com" className="font-outfit text-[13px] font-light text-white/50 hover:text-pink-400 transition-colors flex items-center gap-2.5 justify-center md:justify-start">
-                  <i className="bi bi-envelope w-4" /> contacto@codexstudiove.com
+                  <i className="bi bi-envelope w-4" aria-hidden="true" /> contacto@codexstudiove.com
                 </a>
               </li>
               <li>
                 <a href="mailto:sebastiancorona@codexstudiove.com" className="font-outfit text-[13px] font-light text-white/50 hover:text-pink-400 transition-colors flex items-center gap-2.5 justify-center md:justify-start">
-                  <i className="bi bi-envelope-at w-4" /> sebastiancorona@codexstudiove.com
+                  <i className="bi bi-envelope-at w-4" aria-hidden="true" /> sebastiancorona@codexstudiove.com
                 </a>
               </li>
               <li>
                 <a href="https://www.codexstudiove.com" target="_blank" rel="noopener noreferrer" className="font-outfit text-[13px] font-light text-white/50 hover:text-pink-400 transition-colors flex items-center gap-2.5 justify-center md:justify-start">
-                  <i className="bi bi-globe w-4" /> www.codexstudiove.com
+                  <i className="bi bi-globe w-4" aria-hidden="true" /> www.codexstudiove.com
                 </a>
               </li>
             </ul>
