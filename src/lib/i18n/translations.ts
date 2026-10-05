@@ -266,40 +266,6 @@ export const translations = {
     ],
     portfolio: {
       linyi: {
-        short: "Plataforma E-commerce internacional con pagos multi-moneda y logística cross-border China-LATAM.",
-        long: "Mi Pana en Linyi es una operación comercial internacional liderada por Sebastián Ernesto Corona Bencomo, empresario y desarrollador Full-Stack venezolano. Este proyecto conecta fabricantes mayoristas de China (Linyi, Shandong) con distribuidores de toda Latinoamérica, gestionando toda la cadena de suministro: negociación con fábricas, logística internacional, aduanas y comercio transfronterizo. La plataforma integra tecnologías chinas de punta y respalda operaciones con pagos multi-moneda (CNY, USD, EUR), tracking en tiempo real y gestión documental multilingüe. Es la prueba viva de que un programador venezolano puede dirigir operaciones empresariales complejas en el mercado asiático, respaldado por corporaciones tecnológicas chinas.",
-      },
-      noogui: {
-        short: "Catálogo de emprendedor para gestionar pedidos, productos y facturación en línea con dashboard en tiempo real.",
-        long: "Noogui es una tienda en línea y catálogo digital diseñado para emprendedores que quieren gestionar sus pedidos, productos y clientes sin complicaciones. Incluye un dashboard en tiempo real que muestra ventas, stock y métricas clave, además de un flujo automatizado que reduce el trabajo manual hasta en un 80%. Emite facturas en PDF profesionales listas para compartir con tus clientes, sin necesidad de sistemas contables complejos. Es la solución ideal para pequeños negocios que quieren digitalizar su operación sin depender de plataformas costosas.",
-      },
-      lipid: {
-        short: "Sistema de predicción y análisis de perfiles lipídicos y riesgo cardiovascular.",
-        long: "Lipid-Profile-Predictor es una herramienta de investigación científica desarrollada en Codex Studio VE que combina análisis clínico, procesamiento de datos nutricionales y modelos predictivos para evaluar el riesgo cardiovascular de un paciente. La plataforma procesa perfiles lipídicos completos (colesterol total, HDL, LDL, triglicéridos) y los cruza con variables antropométricas y nutricionales para generar un índice de riesgo personalizado. Diseñada como herramienta de apoyo para profesionales de la salud y nutricionistas, permite visualizar tendencias y generar recomendaciones basadas en evidencia, todo desde el navegador sin comprometer la privacidad del paciente.",
-      },
-      tempusdb: {
-        short: "Motor de base de datos para series temporales con compresión LZ4 escrita en Rust y Go.",
-        long: "TempusDB es un motor de base de datos especializado en series temporales, desarrollado desde cero por Sebastián Corona como proyecto de investigación técnica avanzada. Está escrito en Rust y Go (dos lenguajes conocidos por su rendimiento y seguridad de memoria), e implementa algoritmos de compresión LZ4 que reducen el tamaño de almacenamiento en más del 80% sin pérdida de fidelidad en los datos. Incluye un sistema de índices optimizados para queries de rango temporal, soporte para múltiples formatos de timestamp y una API de consultas diseñada para ser rápida y expresiva. Está pensado para casos de uso como monitoreo de infraestructura, IoT industrial, telemetría de aplicaciones y análisis financiero en tiempo real.",
-      },
-      typeon: {
-        short: "Framework para APIs REST escalables con caché distribuida y cifrado AES-256-GCM.",
-        long: "Typeon es un framework interno desarrollado por Codex Studio VE para construir APIs REST de alto rendimiento con foco absoluto en seguridad y escalabilidad. Incluye una capa de caché distribuida sobre Redis que reduce los tiempos de respuesta en un 60% en cargas altas, un sistema de cifrado simétrico AES-256-GCM con derivación de claves ECDH para comunicaciones seguras, y middlewares modulares de autenticación, rate limiting y logging estructurado. Está pensado para equipos que necesitan desplegar microservicios rápidos sin sacrificar la seguridad. Cada endpoint se documenta automáticamente vía OpenAPI.",
-      },
-      hstp: {
-        short: "Protocolo de transporte seguro con validación de identificadores mediante algoritmo de Luhn.",
-        long: "HSTP (Hardened Secure Transport Protocol) es un protocolo de capa de transporte diseñado por Codex Studio VE como Proof of Concept de ciberseguridad avanzada. Su objetivo es minimizar la exposición de datos sensibles durante la transmisión mediante un esquema de validación de identificadores basado en el algoritmo de Luhn combinado con firma criptográfica. A diferencia de TLS/HTTPS convencionales, HSTP incluye validación bidireccional de payloads, detección temprana de anomalías y un sistema de tokens efímeros que se regeneran por cada paquete. Está diseñado para escenarios donde la integridad de cada dato es crítica.",
-      },
-      odoo: {
-        short: "Implementación de sistema de facturación e inventario personalizado en Odoo.",
-        long: "Proyecto de consultoría ejecutado por Sebastián Corona para Yerbatera del Sur Co., una empresa argentina dedicada a la comercialización de yerba mate. La implementación en Odoo centralizó toda la operación: control de productos (con soporte para lotes, vencimientos y unidades de medida específicas), envíos, proveedores y operaciones comerciales que antes se llevaban en hojas de cálculo dispersas. El módulo personalizado incluye generación de facturas con validez fiscal argentina, reportes de rentabilidad por producto, alertas automáticas de stock crítico y dashboard gerencial con KPIs en tiempo real. La implementación redujo los errores de facturación en un 30% durante los primeros tres meses.",
-      },
-      huizhiyun: {
-        short: "Pipeline de facturación multilingüe para comercio China-Latinoamérica.",
-        long: "Proyecto de consultoría ejecutado por Sebastián Corona para Huizhiyun Technologies (汇智云科技股份有限公司), una empresa china especializada en datos empresariales. El desafío: construir un pipeline de facturación que procesara documentos en caracteres chinos (codificaciones UTF-8, GBK y GB2312 mezcladas), convirtiera automáticamente divisas (CNY, EUR, USD) con tasas en tiempo real y generara reportes ejecutivos en tres idiomas (mandarín, inglés y español). Sebastián desarrolló el motor de extracción con Python, pandas y openpyxl, el sistema de conversión con APIs financieras y la generación de PDFs con ReportLab y fuentes CJK. El proyecto fue tan exitoso que la empresa china financió el aprendizaje de mandarín por parte de Sebastián.",
-      },
-    },
-    portfolio: {
-      linyi: {
         short: "International e-commerce platform with multi-currency payments and China-LATAM cross-border logistics.",
         long: "Mi Pana en Linyi is an international commercial operation led by Sebastián Ernesto Corona Bencomo, Venezuelan entrepreneur and Full-Stack developer. This project connects wholesale manufacturers in China (Linyi, Shandong) with distributors across Latin America, managing the entire supply chain: factory negotiations, international logistics, customs and cross-border trade. The platform integrates cutting-edge Chinese technologies and supports multi-currency payments (CNY, USD, EUR), real-time tracking and multilingual document management. It is living proof that a Venezuelan programmer can lead complex business operations in the Asian market, backed by Chinese technology corporations.",
       },
@@ -421,40 +387,6 @@ export const translations = {
       { title: "企业自动化", description: "ERP 集成（Odoo）、数据管道、多语言开票和运营工作流优化。" },
       { title: "电子商务物流", description: "库存系统、运输管理、多货币支付集成和供应商控制。" },
     ],
-    portfolio: {
-      linyi: {
-        short: "Plataforma E-commerce internacional con pagos multi-moneda y logística cross-border China-LATAM.",
-        long: "Mi Pana en Linyi es una operación comercial internacional liderada por Sebastián Ernesto Corona Bencomo, empresario y desarrollador Full-Stack venezolano. Este proyecto conecta fabricantes mayoristas de China (Linyi, Shandong) con distribuidores de toda Latinoamérica, gestionando toda la cadena de suministro: negociación con fábricas, logística internacional, aduanas y comercio transfronterizo. La plataforma integra tecnologías chinas de punta y respalda operaciones con pagos multi-moneda (CNY, USD, EUR), tracking en tiempo real y gestión documental multilingüe. Es la prueba viva de que un programador venezolano puede dirigir operaciones empresariales complejas en el mercado asiático, respaldado por corporaciones tecnológicas chinas.",
-      },
-      noogui: {
-        short: "Catálogo de emprendedor para gestionar pedidos, productos y facturación en línea con dashboard en tiempo real.",
-        long: "Noogui es una tienda en línea y catálogo digital diseñado para emprendedores que quieren gestionar sus pedidos, productos y clientes sin complicaciones. Incluye un dashboard en tiempo real que muestra ventas, stock y métricas clave, además de un flujo automatizado que reduce el trabajo manual hasta en un 80%. Emite facturas en PDF profesionales listas para compartir con tus clientes, sin necesidad de sistemas contables complejos. Es la solución ideal para pequeños negocios que quieren digitalizar su operación sin depender de plataformas costosas.",
-      },
-      lipid: {
-        short: "Sistema de predicción y análisis de perfiles lipídicos y riesgo cardiovascular.",
-        long: "Lipid-Profile-Predictor es una herramienta de investigación científica desarrollada en Codex Studio VE que combina análisis clínico, procesamiento de datos nutricionales y modelos predictivos para evaluar el riesgo cardiovascular de un paciente. La plataforma procesa perfiles lipídicos completos (colesterol total, HDL, LDL, triglicéridos) y los cruza con variables antropométricas y nutricionales para generar un índice de riesgo personalizado. Diseñada como herramienta de apoyo para profesionales de la salud y nutricionistas, permite visualizar tendencias y generar recomendaciones basadas en evidencia, todo desde el navegador sin comprometer la privacidad del paciente.",
-      },
-      tempusdb: {
-        short: "Motor de base de datos para series temporales con compresión LZ4 escrita en Rust y Go.",
-        long: "TempusDB es un motor de base de datos especializado en series temporales, desarrollado desde cero por Sebastián Corona como proyecto de investigación técnica avanzada. Está escrito en Rust y Go (dos lenguajes conocidos por su rendimiento y seguridad de memoria), e implementa algoritmos de compresión LZ4 que reducen el tamaño de almacenamiento en más del 80% sin pérdida de fidelidad en los datos. Incluye un sistema de índices optimizados para queries de rango temporal, soporte para múltiples formatos de timestamp y una API de consultas diseñada para ser rápida y expresiva. Está pensado para casos de uso como monitoreo de infraestructura, IoT industrial, telemetría de aplicaciones y análisis financiero en tiempo real.",
-      },
-      typeon: {
-        short: "Framework para APIs REST escalables con caché distribuida y cifrado AES-256-GCM.",
-        long: "Typeon es un framework interno desarrollado por Codex Studio VE para construir APIs REST de alto rendimiento con foco absoluto en seguridad y escalabilidad. Incluye una capa de caché distribuida sobre Redis que reduce los tiempos de respuesta en un 60% en cargas altas, un sistema de cifrado simétrico AES-256-GCM con derivación de claves ECDH para comunicaciones seguras, y middlewares modulares de autenticación, rate limiting y logging estructurado. Está pensado para equipos que necesitan desplegar microservicios rápidos sin sacrificar la seguridad. Cada endpoint se documenta automáticamente vía OpenAPI.",
-      },
-      hstp: {
-        short: "Protocolo de transporte seguro con validación de identificadores mediante algoritmo de Luhn.",
-        long: "HSTP (Hardened Secure Transport Protocol) es un protocolo de capa de transporte diseñado por Codex Studio VE como Proof of Concept de ciberseguridad avanzada. Su objetivo es minimizar la exposición de datos sensibles durante la transmisión mediante un esquema de validación de identificadores basado en el algoritmo de Luhn combinado con firma criptográfica. A diferencia de TLS/HTTPS convencionales, HSTP incluye validación bidireccional de payloads, detección temprana de anomalías y un sistema de tokens efímeros que se regeneran por cada paquete. Está diseñado para escenarios donde la integridad de cada dato es crítica.",
-      },
-      odoo: {
-        short: "Implementación de sistema de facturación e inventario personalizado en Odoo.",
-        long: "Proyecto de consultoría ejecutado por Sebastián Corona para Yerbatera del Sur Co., una empresa argentina dedicada a la comercialización de yerba mate. La implementación en Odoo centralizó toda la operación: control de productos (con soporte para lotes, vencimientos y unidades de medida específicas), envíos, proveedores y operaciones comerciales que antes se llevaban en hojas de cálculo dispersas. El módulo personalizado incluye generación de facturas con validez fiscal argentina, reportes de rentabilidad por producto, alertas automáticas de stock crítico y dashboard gerencial con KPIs en tiempo real. La implementación redujo los errores de facturación en un 30% durante los primeros tres meses.",
-      },
-      huizhiyun: {
-        short: "Pipeline de facturación multilingüe para comercio China-Latinoamérica.",
-        long: "Proyecto de consultoría ejecutado por Sebastián Corona para Huizhiyun Technologies (汇智云科技股份有限公司), una empresa china especializada en datos empresariales. El desafío: construir un pipeline de facturación que procesara documentos en caracteres chinos (codificaciones UTF-8, GBK y GB2312 mezcladas), convirtiera automáticamente divisas (CNY, EUR, USD) con tasas en tiempo real y generara reportes ejecutivos en tres idiomas (mandarín, inglés y español). Sebastián desarrolló el motor de extracción con Python, pandas y openpyxl, el sistema de conversión con APIs financieras y la generación de PDFs con ReportLab y fuentes CJK. El proyecto fue tan exitoso que la empresa china financió el aprendizaje de mandarín por parte de Sebastián.",
-      },
-    },
     portfolio: {
       linyi: {
         short: "具有多货币支付和中国-拉美跨境物流的国际电子商务平台。",
