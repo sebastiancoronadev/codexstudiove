@@ -10,7 +10,7 @@ interface HeroProps {
 }
 
 export function Hero({ onIntroComplete }: HeroProps) {
-  const { t, lang } = useTranslation();
+  const { t } = useTranslation();
   const [introDone, setIntroDone] = useState(false);
 
   const line1 = t("hero.line1") as string;
@@ -29,7 +29,10 @@ export function Hero({ onIntroComplete }: HeroProps) {
   }, [introDone]);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section
+      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      aria-label="Presentación de Codex Studio VE"
+    >
       <div className="absolute inset-0 bg-grid-pattern opacity-30" />
 
       <motion.div
@@ -49,30 +52,33 @@ export function Hero({ onIntroComplete }: HeroProps) {
       <motion.div
         initial={{ opacity: 0, scale: 0.5 }}
         animate={isComplete ? { opacity: 0.7, scale: 1 } : { opacity: 0, scale: 0.5 }}
-        transition={{ duration: 2, delay: 0.8, ease: [0.22, 1, 0.36, 1] }}
+        transition={{ duration: 2, delay: 0.8 }}
         className="absolute top-1/4 left-1/4 w-[400px] h-[400px] bg-purple-600/15 rounded-full blur-[160px] pointer-events-none"
       />
 
       <motion.div
         initial={{ opacity: 0, scale: 0.5 }}
         animate={isComplete ? { opacity: 0.7, scale: 1 } : { opacity: 0, scale: 0.5 }}
-        transition={{ duration: 2, delay: 0.9, ease: [0.22, 1, 0.36, 1] }}
+        transition={{ duration: 2, delay: 0.9 }}
         className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-rose-500/15 rounded-full blur-[160px] pointer-events-none"
       />
 
       <div className="relative z-10 container mx-auto px-6 text-center">
-        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8 }}>
-          <h1 className="font-outfit text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-8 min-h-[5rem] md:min-h-[7rem] leading-[1.15]">
-            {displayText}
-            {!isComplete && (
-              <motion.span
-                animate={{ opacity: [1, 0, 1] }}
-                transition={{ duration: 0.9, repeat: Infinity }}
-                className="inline-block w-[3px] md:w-[4px] h-[1.5rem] md:h-[3rem] bg-white ml-2 align-middle"
-              />
-            )}
-          </h1>
-        </motion.div>
+        <h1 className="sr-only">Codex Studio VE - Desarrollo Software y Arquitectura Web</h1>
+
+        <p
+          aria-hidden="true"
+          className="font-outfit text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-8 min-h-[5rem] md:min-h-[7rem] leading-[1.15]"
+        >
+          {displayText}
+          {!isComplete && (
+            <motion.span
+              animate={{ opacity: [1, 0, 1] }}
+              transition={{ duration: 0.9, repeat: Infinity }}
+              className="inline-block w-[3px] md:w-[4px] h-[2rem] md:h-[3rem] bg-white ml-2 align-middle"
+            />
+          )}
+        </p>
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}

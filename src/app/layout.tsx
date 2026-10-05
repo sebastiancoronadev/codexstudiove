@@ -36,11 +36,11 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.codexstudiove.com"),
   title: {
-    default: "Codex Studio VE | Sebastián Corona - Arquitectura de Software de Élite",
+    default: "Codex Studio VE | Desarrollo de Software y Automatización",
     template: "%s | Codex Studio VE",
   },
   description:
-    "Sebastián Corona, Fundador de Codex Studio VE. Desarrollo Full-Stack, automatización empresarial, Odoo ERP, servidores Minecraft, Discord bots y arquitecturas cloud de alto rendimiento. Valencia, Venezuela.",
+    "Codex Studio VE: Desarrollo de software, apps web y automatización para pymes. Expertos en Next.js, Odoo y logística e-commerce en Venezuela.",
   keywords: [
     "Sebastián Corona",
     "Sebastián Corona programador",
@@ -49,27 +49,15 @@ export const metadata: Metadata = {
     "desarrollador full-stack Venezuela",
     "automatización empresarial",
     "Odoo ERP Venezuela",
-    "servidores Minecraft",
-    "Discord bots",
-    "arquitectura cloud",
-    "ciberseguridad Venezuela",
-    "programador Carabobo",
     "desarrollo web Valencia",
     "Next.js Venezuela",
-    "React Venezuela",
-    "Python Venezuela",
-    "editor de video Venezuela",
-    "Mi Pana en Linyi",
     "empresario tecnológico Venezuela",
   ],
   authors: [{ name: "Sebastián Ernesto Corona Bencomo", url: "https://www.codexstudiove.com" }],
   creator: "Sebastián Ernesto Corona Bencomo",
   publisher: "Codex Studio VE",
   icons: {
-    icon: [
-      { url: "/assets/favicon/favicon.ico" },
-      { url: "/favicon.ico", rel: "shortcut icon" },
-    ],
+    icon: [{ url: "/assets/favicon/favicon.ico" }, { url: "/favicon.ico", rel: "shortcut icon" }],
     apple: "/assets/favicon/favicon.ico",
   },
   robots: {
@@ -89,12 +77,12 @@ export const metadata: Metadata = {
     alternateLocale: ["en_US", "zh_CN"],
     url: "https://www.codexstudiove.com",
     siteName: "Codex Studio VE",
-    title: "Codex Studio VE | Sebastián Corona - Arquitectura de Software de Élite",
+    title: "Codex Studio VE | Desarrollo de Software y Automatización",
     description:
-      "Desarrollo Full-Stack, automatización empresarial, Odoo ERP, servidores Minecraft y arquitecturas cloud. Desde Venezuela para el mundo.",
+      "Desarrollo de software, apps web y automatización para pymes. Expertos en Next.js, Odoo y logística e-commerce.",
     images: [
       {
-        url: "/assets/images/og-image.jpg",
+        url: "/assets/images/brand/codex-logo-web.png",
         width: 1200,
         height: 630,
         alt: "Codex Studio VE - Sebastián Corona",
@@ -103,17 +91,17 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Codex Studio VE | Sebastián Corona",
-    description: "Arquitectura de software de élite desde Venezuela. Full-Stack, automatización, Odoo ERP, cloud.",
-    images: ["/assets/images/og-image.jpg"],
+    title: "Codex Studio VE | Desarrollo de Software",
+    description: "Desarrollo de software, apps web y automatización para pymes en Venezuela.",
+    images: ["/assets/images/brand/codex-logo-web.png"],
     creator: "@codexstudiove",
   },
   alternates: {
     canonical: "https://www.codexstudiove.com",
     languages: {
-      "es-VE": "https://www.codexstudiove.com",
-      "en-US": "https://www.codexstudiove.com/en",
-      "zh-CN": "https://www.codexstudiove.com/zh",
+      es: "https://www.codexstudiove.com",
+      en: "https://www.codexstudiove.com/en",
+      zh: "https://www.codexstudiove.com/zh",
     },
   },
   category: "technology",
@@ -158,7 +146,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         areaServed: ["VE", "US", "CN", "AR", "JP", "CO", "EC", "CA", "ES", "CL", "AT"],
         knowsLanguage: ["es", "en", "zh"],
         description:
-          "Codex Studio VE es una agencia de arquitectura de software de élite especializada en desarrollo full-stack, automatización empresarial, Odoo ERP, ciberseguridad y soluciones cloud. Fundada por Sebastián Corona en Valencia, Venezuela.",
+          "Codex Studio VE es una agencia de arquitectura de software especializada en desarrollo full-stack, automatización empresarial, Odoo ERP y soluciones cloud.",
       },
       {
         "@type": "Person",
@@ -183,7 +171,6 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           "Cloud Architecture",
           "Ciberseguridad",
           "Edición de Video",
-          "Comercio Internacional China-LATAM",
         ],
         nationality: "VE",
       },
@@ -193,24 +180,28 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         url: "https://www.codexstudiove.com",
         name: "Codex Studio VE",
         publisher: { "@id": "https://www.codexstudiove.com/#organization" },
-        inLanguage: ["es-VE", "en-US", "zh-CN"],
+        inLanguage: ["es", "en", "zh"],
       },
     ],
   };
 
   return (
-    <html lang="es" className={`${spaceGrotesk.variable} ${outfit.variable} ${syncopate.variable}`}>
+    <html lang="es">
       <head>
         <link
           rel="stylesheet"
           href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
         />
+        <link rel="preconnect" href="https://flagcdn.com" />
+        <link rel="dns-prefetch" href="https://flagcdn.com" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="bg-[#050505] text-white antialiased select-none">
+      <body
+        className={`${spaceGrotesk.variable} ${outfit.variable} ${syncopate.variable} bg-[#050505] text-white antialiased select-none`}
+      >
         <I18nProvider>{children}</I18nProvider>
       </body>
     </html>

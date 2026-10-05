@@ -6,21 +6,14 @@ import { GlowCard } from "@/components/ui/GlowCard";
 import { team } from "@/lib/data/team";
 import { useTranslation } from "@/lib/i18n/useTranslation";
 
-/**
- * CONTENEDOR DE IMAGEN DEL EQUIPO:
- * - aspect-[3/4]  → proporción 3 ancho x 4 alto
- * - object-contain object-bottom → mantiene la imagen sin recortar
- *
- * TAMAÑO RECOMENDADO DE IMÁGENES PNG: 900 x 1200 px (proporción 3:4)
- */
 export function Team() {
   const { t } = useTranslation();
   const translatedMembers = t("team.members") as Array<{ role: string; description: string }>;
 
   return (
     <section id="equipo" className="relative py-20 md:py-32 bg-[#0a0a0a]">
-      <div className="absolute inset-0 bg-grid-pattern opacity-10" />
-      <div className="absolute top-1/4 right-1/4 w-[600px] h-[600px] bg-orange-500/8 rounded-full blur-[160px] pointer-events-none" />
+      <div className="absolute inset-0 bg-grid-pattern opacity-10 pointer-events-none" />
+      <div className="absolute top-1/4 right-1/4 w-[400px] md:w-[600px] h-[400px] md:h-[600px] bg-orange-500/8 rounded-full blur-[160px] pointer-events-none" />
 
       <div className="relative z-10 container mx-auto px-4 md:px-6">
         <SectionTitle title={t("sections.team")} subtitle={t("sections.teamSub")} />
@@ -44,8 +37,9 @@ export function Team() {
                         src={member.image}
                         alt={`${member.name} - ${tr?.role || member.role} en Codex Studio VE`}
                         fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        quality={95}
                         className="object-contain object-bottom"
-                        sizes="(max-width: 768px) 100vw, 33vw"
                       />
                       <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-[#0a0a0a] to-transparent z-10 pointer-events-none" />
                     </div>
@@ -59,7 +53,7 @@ export function Team() {
                     </p>
 
                     <p className="font-outfit text-[12px] font-light text-white/40 mb-4 flex items-center gap-1.5">
-                      <i className="bi bi-geo-alt" />
+                      <i className="bi bi-geo-alt" aria-hidden="true" />
                       {member.location}
                     </p>
 
@@ -72,18 +66,14 @@ export function Team() {
                         <strong className="text-white/90 font-outfit text-sm font-bold">
                           {member.experience}
                         </strong>
-                        <span className="uppercase tracking-wider">
-                          {t("team.experience")}
-                        </span>
+                        <span className="uppercase tracking-wider">{t("team.experience")}</span>
                       </span>
                       <span className="w-px bg-white/10" />
                       <span className="flex flex-col items-center gap-0.5">
                         <strong className="text-white/90 font-outfit text-sm font-bold">
                           {member.projects}
                         </strong>
-                        <span className="uppercase tracking-wider">
-                          {t("team.projects")}
-                        </span>
+                        <span className="uppercase tracking-wider">{t("team.projects")}</span>
                       </span>
                     </div>
 
@@ -96,7 +86,7 @@ export function Team() {
                           className="w-10 h-10 rounded-full bg-white/[0.03] border border-white/10 flex items-center justify-center text-white/40 hover:text-pink-400 hover:border-pink-500/40 hover:bg-pink-500/10 transition-all duration-300"
                           aria-label={`GitHub de ${member.name}`}
                         >
-                          <i className="bi bi-github text-base" />
+                          <i className="bi bi-github text-base" aria-hidden="true" />
                         </a>
                       )}
 
@@ -108,14 +98,14 @@ export function Team() {
                           className="w-10 h-10 rounded-full bg-white/[0.03] border border-white/10 flex items-center justify-center text-white/40 hover:text-pink-400 hover:border-pink-500/40 hover:bg-pink-500/10 transition-all duration-300"
                           aria-label={`LinkedIn de ${member.name}`}
                         >
-                          <i className="bi bi-linkedin text-base" />
+                          <i className="bi bi-linkedin text-base" aria-hidden="true" />
                         </a>
                       ) : (
                         <span
                           className="w-10 h-10 rounded-full bg-white/[0.02] border border-white/[0.06] flex items-center justify-center text-white/15 cursor-not-allowed"
                           aria-label="LinkedIn no disponible"
                         >
-                          <i className="bi bi-linkedin text-base" />
+                          <i className="bi bi-linkedin text-base" aria-hidden="true" />
                         </span>
                       )}
 
@@ -127,7 +117,7 @@ export function Team() {
                           className="w-10 h-10 rounded-full bg-white/[0.03] border border-white/10 flex items-center justify-center text-white/40 hover:text-green-400 hover:border-green-500/40 hover:bg-green-500/10 transition-all duration-300"
                           aria-label={`WhatsApp de ${member.name}`}
                         >
-                          <i className="bi bi-whatsapp text-base" />
+                          <i className="bi bi-whatsapp text-base" aria-hidden="true" />
                         </a>
                       )}
                     </div>

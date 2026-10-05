@@ -111,16 +111,40 @@ export const translations = {
       { title: "Automatización Empresarial", description: "Integración de sistemas ERP (Odoo), pipelines de datos, facturación multilingüe y optimización de flujos operativos." },
       { title: "Logística E-commerce", description: "Sistemas de inventario, gestión de envíos, integración de pagos multi-moneda y control de proveedores." },
     ],
-    portfolio: [
-      { description: "Plataforma E-commerce internacional con integración de pagos multi-moneda y logística cross-border." },
-      { description: "Sistema de gestión de inventario y facturación para PYMES con dashboard en tiempo real." },
-      { description: "Sistema de predicción y análisis de perfiles lipídicos y riesgo cardiovascular." },
-      { description: "Motor de base de datos para series temporales con algoritmos de compresión LZ4." },
-      { description: "Framework para APIs REST escalables con caché distribuida y cifrado AES-256-GCM." },
-      { description: "Protocolo de transporte seguro con validación de identificadores mediante algoritmo de Luhn." },
-      { description: "Implementación de sistema de facturación e inventario personalizado en Odoo." },
-      { description: "Pipeline de facturación multilingüe para comercio China-Latinoamérica." },
-    ],
+    portfolio: {
+      linyi: {
+        short: "Plataforma E-commerce internacional con pagos multi-moneda y logística cross-border China-LATAM.",
+        long: "Mi Pana en Linyi es una operación comercial internacional liderada por Sebastián Ernesto Corona Bencomo, empresario y desarrollador Full-Stack venezolano. Este proyecto conecta fabricantes mayoristas de China (Linyi, Shandong) con distribuidores de toda Latinoamérica, gestionando toda la cadena de suministro: negociación con fábricas, logística internacional, aduanas y comercio transfronterizo. La plataforma integra tecnologías chinas de punta y respalda operaciones con pagos multi-moneda (CNY, USD, EUR), tracking en tiempo real y gestión documental multilingüe. Es la prueba viva de que un programador venezolano puede dirigir operaciones empresariales complejas en el mercado asiático, respaldado por corporaciones tecnológicas chinas.",
+      },
+      noogui: {
+        short: "Catálogo de emprendedor para gestionar pedidos, productos y facturación en línea con dashboard en tiempo real.",
+        long: "Noogui es una tienda en línea y catálogo digital diseñado para emprendedores que quieren gestionar sus pedidos, productos y clientes sin complicaciones. Incluye un dashboard en tiempo real que muestra ventas, stock y métricas clave, además de un flujo automatizado que reduce el trabajo manual hasta en un 80%. Emite facturas en PDF profesionales listas para compartir con tus clientes, sin necesidad de sistemas contables complejos. Es la solución ideal para pequeños negocios que quieren digitalizar su operación sin depender de plataformas costosas.",
+      },
+      lipid: {
+        short: "Sistema de predicción y análisis de perfiles lipídicos y riesgo cardiovascular.",
+        long: "Lipid-Profile-Predictor es una herramienta de investigación científica desarrollada en Codex Studio VE que combina análisis clínico, procesamiento de datos nutricionales y modelos predictivos para evaluar el riesgo cardiovascular de un paciente. La plataforma procesa perfiles lipídicos completos (colesterol total, HDL, LDL, triglicéridos) y los cruza con variables antropométricas y nutricionales para generar un índice de riesgo personalizado. Diseñada como herramienta de apoyo para profesionales de la salud y nutricionistas, permite visualizar tendencias y generar recomendaciones basadas en evidencia, todo desde el navegador sin comprometer la privacidad del paciente.",
+      },
+      tempusdb: {
+        short: "Motor de base de datos para series temporales con compresión LZ4 escrita en Rust y Go.",
+        long: "TempusDB es un motor de base de datos especializado en series temporales, desarrollado desde cero por Sebastián Corona como proyecto de investigación técnica avanzada. Está escrito en Rust y Go (dos lenguajes conocidos por su rendimiento y seguridad de memoria), e implementa algoritmos de compresión LZ4 que reducen el tamaño de almacenamiento en más del 80% sin pérdida de fidelidad en los datos. Incluye un sistema de índices optimizados para queries de rango temporal, soporte para múltiples formatos de timestamp y una API de consultas diseñada para ser rápida y expresiva. Está pensado para casos de uso como monitoreo de infraestructura, IoT industrial, telemetría de aplicaciones y análisis financiero en tiempo real.",
+      },
+      typeon: {
+        short: "Framework para APIs REST escalables con caché distribuida y cifrado AES-256-GCM.",
+        long: "Typeon es un framework interno desarrollado por Codex Studio VE para construir APIs REST de alto rendimiento con foco absoluto en seguridad y escalabilidad. Incluye una capa de caché distribuida sobre Redis que reduce los tiempos de respuesta en un 60% en cargas altas, un sistema de cifrado simétrico AES-256-GCM con derivación de claves ECDH para comunicaciones seguras, y middlewares modulares de autenticación, rate limiting y logging estructurado. Está pensado para equipos que necesitan desplegar microservicios rápidos sin sacrificar la seguridad. Cada endpoint se documenta automáticamente vía OpenAPI.",
+      },
+      hstp: {
+        short: "Protocolo de transporte seguro con validación de identificadores mediante algoritmo de Luhn.",
+        long: "HSTP (Hardened Secure Transport Protocol) es un protocolo de capa de transporte diseñado por Codex Studio VE como Proof of Concept de ciberseguridad avanzada. Su objetivo es minimizar la exposición de datos sensibles durante la transmisión mediante un esquema de validación de identificadores basado en el algoritmo de Luhn combinado con firma criptográfica. A diferencia de TLS/HTTPS convencionales, HSTP incluye validación bidireccional de payloads, detección temprana de anomalías y un sistema de tokens efímeros que se regeneran por cada paquete. Está diseñado para escenarios donde la integridad de cada dato es crítica.",
+      },
+      odoo: {
+        short: "Implementación de sistema de facturación e inventario personalizado en Odoo.",
+        long: "Proyecto de consultoría ejecutado por Sebastián Corona para Yerbatera del Sur Co., una empresa argentina dedicada a la comercialización de yerba mate. La implementación en Odoo centralizó toda la operación: control de productos (con soporte para lotes, vencimientos y unidades de medida específicas), envíos, proveedores y operaciones comerciales que antes se llevaban en hojas de cálculo dispersas. El módulo personalizado incluye generación de facturas con validez fiscal argentina, reportes de rentabilidad por producto, alertas automáticas de stock crítico y dashboard gerencial con KPIs en tiempo real. La implementación redujo los errores de facturación en un 30% durante los primeros tres meses.",
+      },
+      huizhiyun: {
+        short: "Pipeline de facturación multilingüe para comercio China-Latinoamérica.",
+        long: "Proyecto de consultoría ejecutado por Sebastián Corona para Huizhiyun Technologies (汇智云科技股份有限公司), una empresa china especializada en datos empresariales. El desafío: construir un pipeline de facturación que procesara documentos en caracteres chinos (codificaciones UTF-8, GBK y GB2312 mezcladas), convirtiera automáticamente divisas (CNY, EUR, USD) con tasas en tiempo real y generara reportes ejecutivos en tres idiomas (mandarín, inglés y español). Sebastián desarrolló el motor de extracción con Python, pandas y openpyxl, el sistema de conversión con APIs financieras y la generación de PDFs con ReportLab y fuentes CJK. El proyecto fue tan exitoso que la empresa china financió el aprendizaje de mandarín por parte de Sebastián.",
+      },
+    },
     team: {
       members: [
         { role: "Fundador & CTO", description: "Fundador de Codex Studio VE, líder en transformación digital. Programador Senior especializado en desarrollo full-stack, automatización empresarial, integración de sistemas ERP (Odoo) y arquitecturas cloud de alto rendimiento. Editor de video profesional. Referente en innovación tecnológica en Venezuela." },
@@ -167,7 +191,7 @@ export const translations = {
       { quote: "Codex Studio revolucionó nuestra tienda en línea. Su atención al detalle y el diseño moderno incrementaron nuestras ventas de manera increíble en solo semanas.", author: "Gerente Comercial", company: "Veraux Ropa", location: "Venezuela" },
       { quote: "El equipo entendió perfectamente nuestra visión corporativa. La plataforma es rápida, segura y transmite la confianza que buscábamos para nuestros clientes.", author: "CEO", company: "Altivan Inmobiliaria", location: "Venezuela" },
       { quote: "Nuestro portal empresarial ha dado un salto generacional. Operaciones más rápidas y una interfaz sumamente intuitiva para todo nuestro equipo.", author: "Director de Operaciones", company: "Concretera Solidexa", location: "Venezuela" },
-      { quote: "La calidad visual que entregaron superó todas las expectativas. Nuestros clientes disfrutan un catálogo moderno, responsivo y dinámico.", author: "Propietario", company: "Concesionario La Fé", location: "Venezuela" },
+      { quote: "La calidad visual que entregaron superó todas las expectativas. Nuestros clientes disfrutan un catálogo moderno, responsivo y dinámico.", author: "Propietario", company: "Concesionario La Fe", location: "Venezuela" },
       { quote: "Sebastián transformó nuestra operación logística. Redujo errores de facturación en un 30% en solo 3 semanas de implementación.", author: "Gerente General", company: "Yerbatera del Sur S.A.", location: "Argentina" },
       { quote: "El pipeline de facturación multilingüe superó todas nuestras expectativas. Procesamiento impecable de caracteres chinos y reportes en 3 idiomas.", author: "Director de Operaciones", company: "Huizhiyun Tecnologías", location: "China" },
       { quote: "Automatización del 50% de nuestros reportes contables. El cierre mensual pasó de 5 a 2 días gracias a su sistema de scripts personalizados.", author: "Contador Senior", company: "Musashi Transport Co.", location: "Japón" },
@@ -240,16 +264,74 @@ export const translations = {
       { title: "Business Automation", description: "ERP integration (Odoo), data pipelines, multilingual invoicing and operational workflow optimization." },
       { title: "E-commerce Logistics", description: "Inventory systems, shipping management, multi-currency payment integration and supplier control." },
     ],
-    portfolio: [
-      { description: "International e-commerce platform with multi-currency payment integration and cross-border logistics." },
-      { description: "Inventory and invoicing management system for SMBs with real-time dashboard." },
-      { description: "Prediction and analysis system for lipid profiles and cardiovascular risk." },
-      { description: "Time-series database engine with LZ4 compression algorithms." },
-      { description: "Scalable REST API framework with distributed cache and AES-256-GCM encryption." },
-      { description: "Secure transport protocol with identifier validation via Luhn algorithm." },
-      { description: "Custom invoicing and inventory system implementation in Odoo." },
-      { description: "Multilingual invoicing pipeline for China-Latin America trade." },
-    ],
+    portfolio: {
+      linyi: {
+        short: "Plataforma E-commerce internacional con pagos multi-moneda y logística cross-border China-LATAM.",
+        long: "Mi Pana en Linyi es una operación comercial internacional liderada por Sebastián Ernesto Corona Bencomo, empresario y desarrollador Full-Stack venezolano. Este proyecto conecta fabricantes mayoristas de China (Linyi, Shandong) con distribuidores de toda Latinoamérica, gestionando toda la cadena de suministro: negociación con fábricas, logística internacional, aduanas y comercio transfronterizo. La plataforma integra tecnologías chinas de punta y respalda operaciones con pagos multi-moneda (CNY, USD, EUR), tracking en tiempo real y gestión documental multilingüe. Es la prueba viva de que un programador venezolano puede dirigir operaciones empresariales complejas en el mercado asiático, respaldado por corporaciones tecnológicas chinas.",
+      },
+      noogui: {
+        short: "Catálogo de emprendedor para gestionar pedidos, productos y facturación en línea con dashboard en tiempo real.",
+        long: "Noogui es una tienda en línea y catálogo digital diseñado para emprendedores que quieren gestionar sus pedidos, productos y clientes sin complicaciones. Incluye un dashboard en tiempo real que muestra ventas, stock y métricas clave, además de un flujo automatizado que reduce el trabajo manual hasta en un 80%. Emite facturas en PDF profesionales listas para compartir con tus clientes, sin necesidad de sistemas contables complejos. Es la solución ideal para pequeños negocios que quieren digitalizar su operación sin depender de plataformas costosas.",
+      },
+      lipid: {
+        short: "Sistema de predicción y análisis de perfiles lipídicos y riesgo cardiovascular.",
+        long: "Lipid-Profile-Predictor es una herramienta de investigación científica desarrollada en Codex Studio VE que combina análisis clínico, procesamiento de datos nutricionales y modelos predictivos para evaluar el riesgo cardiovascular de un paciente. La plataforma procesa perfiles lipídicos completos (colesterol total, HDL, LDL, triglicéridos) y los cruza con variables antropométricas y nutricionales para generar un índice de riesgo personalizado. Diseñada como herramienta de apoyo para profesionales de la salud y nutricionistas, permite visualizar tendencias y generar recomendaciones basadas en evidencia, todo desde el navegador sin comprometer la privacidad del paciente.",
+      },
+      tempusdb: {
+        short: "Motor de base de datos para series temporales con compresión LZ4 escrita en Rust y Go.",
+        long: "TempusDB es un motor de base de datos especializado en series temporales, desarrollado desde cero por Sebastián Corona como proyecto de investigación técnica avanzada. Está escrito en Rust y Go (dos lenguajes conocidos por su rendimiento y seguridad de memoria), e implementa algoritmos de compresión LZ4 que reducen el tamaño de almacenamiento en más del 80% sin pérdida de fidelidad en los datos. Incluye un sistema de índices optimizados para queries de rango temporal, soporte para múltiples formatos de timestamp y una API de consultas diseñada para ser rápida y expresiva. Está pensado para casos de uso como monitoreo de infraestructura, IoT industrial, telemetría de aplicaciones y análisis financiero en tiempo real.",
+      },
+      typeon: {
+        short: "Framework para APIs REST escalables con caché distribuida y cifrado AES-256-GCM.",
+        long: "Typeon es un framework interno desarrollado por Codex Studio VE para construir APIs REST de alto rendimiento con foco absoluto en seguridad y escalabilidad. Incluye una capa de caché distribuida sobre Redis que reduce los tiempos de respuesta en un 60% en cargas altas, un sistema de cifrado simétrico AES-256-GCM con derivación de claves ECDH para comunicaciones seguras, y middlewares modulares de autenticación, rate limiting y logging estructurado. Está pensado para equipos que necesitan desplegar microservicios rápidos sin sacrificar la seguridad. Cada endpoint se documenta automáticamente vía OpenAPI.",
+      },
+      hstp: {
+        short: "Protocolo de transporte seguro con validación de identificadores mediante algoritmo de Luhn.",
+        long: "HSTP (Hardened Secure Transport Protocol) es un protocolo de capa de transporte diseñado por Codex Studio VE como Proof of Concept de ciberseguridad avanzada. Su objetivo es minimizar la exposición de datos sensibles durante la transmisión mediante un esquema de validación de identificadores basado en el algoritmo de Luhn combinado con firma criptográfica. A diferencia de TLS/HTTPS convencionales, HSTP incluye validación bidireccional de payloads, detección temprana de anomalías y un sistema de tokens efímeros que se regeneran por cada paquete. Está diseñado para escenarios donde la integridad de cada dato es crítica.",
+      },
+      odoo: {
+        short: "Implementación de sistema de facturación e inventario personalizado en Odoo.",
+        long: "Proyecto de consultoría ejecutado por Sebastián Corona para Yerbatera del Sur Co., una empresa argentina dedicada a la comercialización de yerba mate. La implementación en Odoo centralizó toda la operación: control de productos (con soporte para lotes, vencimientos y unidades de medida específicas), envíos, proveedores y operaciones comerciales que antes se llevaban en hojas de cálculo dispersas. El módulo personalizado incluye generación de facturas con validez fiscal argentina, reportes de rentabilidad por producto, alertas automáticas de stock crítico y dashboard gerencial con KPIs en tiempo real. La implementación redujo los errores de facturación en un 30% durante los primeros tres meses.",
+      },
+      huizhiyun: {
+        short: "Pipeline de facturación multilingüe para comercio China-Latinoamérica.",
+        long: "Proyecto de consultoría ejecutado por Sebastián Corona para Huizhiyun Technologies (汇智云科技股份有限公司), una empresa china especializada en datos empresariales. El desafío: construir un pipeline de facturación que procesara documentos en caracteres chinos (codificaciones UTF-8, GBK y GB2312 mezcladas), convirtiera automáticamente divisas (CNY, EUR, USD) con tasas en tiempo real y generara reportes ejecutivos en tres idiomas (mandarín, inglés y español). Sebastián desarrolló el motor de extracción con Python, pandas y openpyxl, el sistema de conversión con APIs financieras y la generación de PDFs con ReportLab y fuentes CJK. El proyecto fue tan exitoso que la empresa china financió el aprendizaje de mandarín por parte de Sebastián.",
+      },
+    },
+    portfolio: {
+      linyi: {
+        short: "International e-commerce platform with multi-currency payments and China-LATAM cross-border logistics.",
+        long: "Mi Pana en Linyi is an international commercial operation led by Sebastián Ernesto Corona Bencomo, Venezuelan entrepreneur and Full-Stack developer. This project connects wholesale manufacturers in China (Linyi, Shandong) with distributors across Latin America, managing the entire supply chain: factory negotiations, international logistics, customs and cross-border trade. The platform integrates cutting-edge Chinese technologies and supports multi-currency payments (CNY, USD, EUR), real-time tracking and multilingual document management. It is living proof that a Venezuelan programmer can lead complex business operations in the Asian market, backed by Chinese technology corporations.",
+      },
+      noogui: {
+        short: "Entrepreneur catalog to manage orders, products and online invoicing with a real-time dashboard.",
+        long: "Noogui is an online store and digital catalog designed for entrepreneurs who want to manage their orders, products and customers without complications. It includes a real-time dashboard showing sales, stock and key metrics, plus an automated flow that reduces manual work by up to 80%. It issues professional PDF invoices ready to share with your customers, without needing complex accounting systems. It is the ideal solution for small businesses that want to digitize their operation without relying on expensive platforms.",
+      },
+      lipid: {
+        short: "Prediction and analysis system for lipid profiles and cardiovascular risk.",
+        long: "Lipid-Profile-Predictor is a scientific research tool developed at Codex Studio VE that combines clinical analysis, nutritional data processing and predictive models to assess a patient's cardiovascular risk. The platform processes complete lipid profiles (total cholesterol, HDL, LDL, triglycerides) and cross-references them with anthropometric and nutritional variables to generate a personalized risk index. Designed as a support tool for health professionals and nutritionists, it allows visualizing trends and generating evidence-based recommendations, all from the browser without compromising patient privacy.",
+      },
+      tempusdb: {
+        short: "Time-series database engine with LZ4 compression written in Rust and Go.",
+        long: "TempusDB is a database engine specialized in time series, developed from scratch by Sebastián Corona as an advanced technical research project. It is written in Rust and Go (two languages known for their performance and memory safety), and implements LZ4 compression algorithms that reduce storage size by over 80% without data fidelity loss. It includes an index system optimized for temporal range queries, support for multiple timestamp formats and a query API designed to be fast and expressive. It is intended for use cases such as infrastructure monitoring, industrial IoT, application telemetry and real-time financial analysis.",
+      },
+      typeon: {
+        short: "Framework for scalable REST APIs with distributed cache and AES-256-GCM encryption.",
+        long: "Typeon is an internal framework developed by Codex Studio VE to build high-performance REST APIs with an absolute focus on security and scalability. It includes a distributed cache layer on Redis that reduces response times by 60% under high load, an AES-256-GCM symmetric encryption system with ECDH key derivation for secure communications, and modular middlewares for authentication, rate limiting and structured logging. It is designed for teams that need to deploy fast microservices without sacrificing security. Each endpoint is automatically documented via OpenAPI.",
+      },
+      hstp: {
+        short: "Secure transport protocol with identifier validation via Luhn algorithm.",
+        long: "HSTP (Hardened Secure Transport Protocol) is a transport layer protocol designed by Codex Studio VE as a Proof of Concept of advanced cybersecurity. Its goal is to minimize exposure of sensitive data during transmission through an identifier validation scheme based on the Luhn algorithm combined with cryptographic signature. Unlike conventional TLS/HTTPS, HSTP includes bidirectional payload validation, early anomaly detection and an ephemeral token system that regenerates for each packet. It is designed for scenarios where the integrity of each data point is critical.",
+      },
+      odoo: {
+        short: "Custom invoicing and inventory system implementation in Odoo.",
+        long: "Consulting project executed by Sebastián Corona for Yerbatera del Sur Co., an Argentine company dedicated to the commercialization of yerba mate. The Odoo implementation centralized the entire operation: product control (with support for batches, expirations and specific units of measure), shipments, suppliers and commercial operations that previously existed in scattered spreadsheets. The custom module includes invoice generation with Argentine fiscal validity, profitability reports per product, automatic critical stock alerts and a management dashboard with real-time KPIs. The implementation reduced invoicing errors by 30% during the first three months.",
+      },
+      huizhiyun: {
+        short: "Multilingual invoicing pipeline for China-Latin America trade.",
+        long: "Consulting project executed by Sebastián Corona for Huizhiyun Technologies (汇智云科技股份有限公司), a Chinese company specialized in enterprise data. The challenge: to build an invoicing pipeline that would process documents in Chinese characters (mixed UTF-8, GBK and GB2312 encodings), automatically convert currencies (CNY, EUR, USD) with real-time rates, and generate executive reports in three languages (Mandarin, English and Spanish). Sebastián developed the extraction engine with Python, pandas and openpyxl, the conversion system with financial APIs, and PDF generation with ReportLab and CJK fonts. The project was so successful that the Chinese company funded Sebastián's Mandarin learning.",
+      },
+    },
     team: {
       members: [
         { role: "Founder & CTO", description: "Founder of Codex Studio VE, digital transformation leader. Senior Developer specialized in full-stack development, business automation, ERP integration (Odoo) and high-performance cloud architectures. Professional video editor. Reference in technological innovation in Venezuela." },
@@ -280,7 +362,7 @@ export const translations = {
       { quote: "Codex Studio revolutionized our online store. Their attention to detail and modern design increased our sales incredibly within weeks.", author: "Commercial Manager", company: "Veraux Ropa", location: "Venezuela" },
       { quote: "The team perfectly understood our corporate vision. The platform is fast, secure and conveys the trust we were looking for.", author: "CEO", company: "Altivan Inmobiliaria", location: "Venezuela" },
       { quote: "Our corporate portal has taken a generational leap. Faster operations and a highly intuitive interface for our entire team.", author: "Operations Director", company: "Concretera Solidexa", location: "Venezuela" },
-      { quote: "The visual quality they delivered exceeded all expectations. Our clients enjoy a modern, responsive and dynamic catalog.", author: "Owner", company: "Concesionario La Fé", location: "Venezuela" },
+      { quote: "The visual quality they delivered exceeded all expectations. Our clients enjoy a modern, responsive and dynamic catalog.", author: "Owner", company: "Concesionario La Fe", location: "Venezuela" },
       { quote: "Sebastián transformed our logistics operation. Reduced invoicing errors by 30% in just 3 weeks.", author: "General Manager", company: "Yerbatera del Sur S.A.", location: "Argentina" },
       { quote: "The multilingual invoicing pipeline exceeded all our expectations. Flawless Chinese character processing with 3-language reports.", author: "Operations Director", company: "Huizhiyun Technologies", location: "China" },
       { quote: "50% automation of our accounting reports. Monthly closing went from 5 to 2 days thanks to their custom scripting system.", author: "Senior Accountant", company: "Musashi Transport Co.", location: "Japan" },
@@ -339,16 +421,74 @@ export const translations = {
       { title: "企业自动化", description: "ERP 集成（Odoo）、数据管道、多语言开票和运营工作流优化。" },
       { title: "电子商务物流", description: "库存系统、运输管理、多货币支付集成和供应商控制。" },
     ],
-    portfolio: [
-      { description: "具有多货币支付集成和跨境物流的国际电子商务平台。" },
-      { description: "面向中小企业的实时仪表板库存和开票管理系统。" },
-      { description: "脂质谱和心血管风险的预测和分析系统。" },
-      { description: "采用 LZ4 压缩算法的时间序列数据库引擎。" },
-      { description: "具有分布式缓存和 AES-256-GCM 加密的可扩展 REST API 框架。" },
-      { description: "通过 Luhn 算法进行标识符验证的安全传输协议。" },
-      { description: "在 Odoo 中实施定制开票和库存系统。" },
-      { description: "中国-拉美贸易的多语言开票管道。" },
-    ],
+    portfolio: {
+      linyi: {
+        short: "Plataforma E-commerce internacional con pagos multi-moneda y logística cross-border China-LATAM.",
+        long: "Mi Pana en Linyi es una operación comercial internacional liderada por Sebastián Ernesto Corona Bencomo, empresario y desarrollador Full-Stack venezolano. Este proyecto conecta fabricantes mayoristas de China (Linyi, Shandong) con distribuidores de toda Latinoamérica, gestionando toda la cadena de suministro: negociación con fábricas, logística internacional, aduanas y comercio transfronterizo. La plataforma integra tecnologías chinas de punta y respalda operaciones con pagos multi-moneda (CNY, USD, EUR), tracking en tiempo real y gestión documental multilingüe. Es la prueba viva de que un programador venezolano puede dirigir operaciones empresariales complejas en el mercado asiático, respaldado por corporaciones tecnológicas chinas.",
+      },
+      noogui: {
+        short: "Catálogo de emprendedor para gestionar pedidos, productos y facturación en línea con dashboard en tiempo real.",
+        long: "Noogui es una tienda en línea y catálogo digital diseñado para emprendedores que quieren gestionar sus pedidos, productos y clientes sin complicaciones. Incluye un dashboard en tiempo real que muestra ventas, stock y métricas clave, además de un flujo automatizado que reduce el trabajo manual hasta en un 80%. Emite facturas en PDF profesionales listas para compartir con tus clientes, sin necesidad de sistemas contables complejos. Es la solución ideal para pequeños negocios que quieren digitalizar su operación sin depender de plataformas costosas.",
+      },
+      lipid: {
+        short: "Sistema de predicción y análisis de perfiles lipídicos y riesgo cardiovascular.",
+        long: "Lipid-Profile-Predictor es una herramienta de investigación científica desarrollada en Codex Studio VE que combina análisis clínico, procesamiento de datos nutricionales y modelos predictivos para evaluar el riesgo cardiovascular de un paciente. La plataforma procesa perfiles lipídicos completos (colesterol total, HDL, LDL, triglicéridos) y los cruza con variables antropométricas y nutricionales para generar un índice de riesgo personalizado. Diseñada como herramienta de apoyo para profesionales de la salud y nutricionistas, permite visualizar tendencias y generar recomendaciones basadas en evidencia, todo desde el navegador sin comprometer la privacidad del paciente.",
+      },
+      tempusdb: {
+        short: "Motor de base de datos para series temporales con compresión LZ4 escrita en Rust y Go.",
+        long: "TempusDB es un motor de base de datos especializado en series temporales, desarrollado desde cero por Sebastián Corona como proyecto de investigación técnica avanzada. Está escrito en Rust y Go (dos lenguajes conocidos por su rendimiento y seguridad de memoria), e implementa algoritmos de compresión LZ4 que reducen el tamaño de almacenamiento en más del 80% sin pérdida de fidelidad en los datos. Incluye un sistema de índices optimizados para queries de rango temporal, soporte para múltiples formatos de timestamp y una API de consultas diseñada para ser rápida y expresiva. Está pensado para casos de uso como monitoreo de infraestructura, IoT industrial, telemetría de aplicaciones y análisis financiero en tiempo real.",
+      },
+      typeon: {
+        short: "Framework para APIs REST escalables con caché distribuida y cifrado AES-256-GCM.",
+        long: "Typeon es un framework interno desarrollado por Codex Studio VE para construir APIs REST de alto rendimiento con foco absoluto en seguridad y escalabilidad. Incluye una capa de caché distribuida sobre Redis que reduce los tiempos de respuesta en un 60% en cargas altas, un sistema de cifrado simétrico AES-256-GCM con derivación de claves ECDH para comunicaciones seguras, y middlewares modulares de autenticación, rate limiting y logging estructurado. Está pensado para equipos que necesitan desplegar microservicios rápidos sin sacrificar la seguridad. Cada endpoint se documenta automáticamente vía OpenAPI.",
+      },
+      hstp: {
+        short: "Protocolo de transporte seguro con validación de identificadores mediante algoritmo de Luhn.",
+        long: "HSTP (Hardened Secure Transport Protocol) es un protocolo de capa de transporte diseñado por Codex Studio VE como Proof of Concept de ciberseguridad avanzada. Su objetivo es minimizar la exposición de datos sensibles durante la transmisión mediante un esquema de validación de identificadores basado en el algoritmo de Luhn combinado con firma criptográfica. A diferencia de TLS/HTTPS convencionales, HSTP incluye validación bidireccional de payloads, detección temprana de anomalías y un sistema de tokens efímeros que se regeneran por cada paquete. Está diseñado para escenarios donde la integridad de cada dato es crítica.",
+      },
+      odoo: {
+        short: "Implementación de sistema de facturación e inventario personalizado en Odoo.",
+        long: "Proyecto de consultoría ejecutado por Sebastián Corona para Yerbatera del Sur Co., una empresa argentina dedicada a la comercialización de yerba mate. La implementación en Odoo centralizó toda la operación: control de productos (con soporte para lotes, vencimientos y unidades de medida específicas), envíos, proveedores y operaciones comerciales que antes se llevaban en hojas de cálculo dispersas. El módulo personalizado incluye generación de facturas con validez fiscal argentina, reportes de rentabilidad por producto, alertas automáticas de stock crítico y dashboard gerencial con KPIs en tiempo real. La implementación redujo los errores de facturación en un 30% durante los primeros tres meses.",
+      },
+      huizhiyun: {
+        short: "Pipeline de facturación multilingüe para comercio China-Latinoamérica.",
+        long: "Proyecto de consultoría ejecutado por Sebastián Corona para Huizhiyun Technologies (汇智云科技股份有限公司), una empresa china especializada en datos empresariales. El desafío: construir un pipeline de facturación que procesara documentos en caracteres chinos (codificaciones UTF-8, GBK y GB2312 mezcladas), convirtiera automáticamente divisas (CNY, EUR, USD) con tasas en tiempo real y generara reportes ejecutivos en tres idiomas (mandarín, inglés y español). Sebastián desarrolló el motor de extracción con Python, pandas y openpyxl, el sistema de conversión con APIs financieras y la generación de PDFs con ReportLab y fuentes CJK. El proyecto fue tan exitoso que la empresa china financió el aprendizaje de mandarín por parte de Sebastián.",
+      },
+    },
+    portfolio: {
+      linyi: {
+        short: "具有多货币支付和中国-拉美跨境物流的国际电子商务平台。",
+        long: "Mi Pana en Linyi 是由委内瑞拉企业家兼全栈开发者 Sebastián Ernesto Corona Bencomo 领导的国际商业运营。该项目连接中国（山东临沂）的批发制造商与整个拉丁美洲的分销商，管理整个供应链：工厂谈判、国际物流、海关和跨境贸易。该平台集成尖端的中国技术，支持多货币支付（CNY、USD、EUR）、实时跟踪和多语言文档管理。这是委内瑞拉程序员能够在亚洲市场领导复杂业务运营的活生生证明。",
+      },
+      noogui: {
+        short: "面向企业家的目录，用于管理订单、产品和在线开票，带实时仪表板。",
+        long: "Noogui 是一个在线商店和数字目录，专为希望无复杂地管理订单、产品和客户的企业家设计。它包括一个实时仪表板，显示销售、库存和关键指标，以及一个自动化流程，可将手动工作量减少多达 80%。它生成专业 PDF 发票，可直接与客户共享，无需复杂的会计系统。是希望数字化运营而不依赖昂贵平台的小型企业的理想解决方案。",
+      },
+      lipid: {
+        short: "脂质谱和心血管风险的预测和分析系统。",
+        long: "Lipid-Profile-Predictor 是 Codex Studio VE 开发的科学研究工具，结合临床分析、营养数据处理和预测模型来评估患者的心血管风险。该平台处理完整的脂质谱（总胆固醇、HDL、LDL、甘油三酯），并与人体测量和营养变量交叉参考，生成个性化的风险指数。作为卫生专业人员和营养师的支持工具设计，允许可视化趋势并生成基于证据的建议，全部在浏览器中完成而不影响患者隐私。",
+      },
+      tempusdb: {
+        short: "使用 Rust 和 Go 编写的带 LZ4 压缩的时间序列数据库引擎。",
+        long: "TempusDB 是专门研究时间序列的数据库引擎，由 Sebastián Corona 从头开始开发作为高级技术研究项目。使用 Rust 和 Go（两种以性能和内存安全著称的语言）编写，并实现 LZ4 压缩算法，可将存储大小减少 80% 以上而不损失数据保真度。包括针对时间范围查询优化的索引系统、对多种时间戳格式的支持以及专为快速和表达力强而设计的查询 API。适用于基础设施监控、工业物联网、应用遥测和实时金融分析等用例。",
+      },
+      typeon: {
+        short: "具有分布式缓存和 AES-256-GCM 加密的可扩展 REST API 框架。",
+        long: "Typeon 是 Codex Studio VE 开发的内部框架，用于构建绝对注重安全性和可扩展性的高性能 REST API。包括 Redis 上的分布式缓存层，在高负载下将响应时间减少 60%，带 ECDH 密钥派生的 AES-256-GCM 对称加密系统，以及用于身份验证、速率限制和结构化日志记录的模块化中间件。专为需要部署快速微服务而不牺牲安全性的团队设计。每个端点通过 OpenAPI 自动记录。",
+      },
+      hstp: {
+        short: "通过 Luhn 算法进行标识符验证的安全传输协议。",
+        long: "HSTP（Hardened Secure Transport Protocol）是 Codex Studio VE 设计的传输层协议，作为高级网络安全的 Proof of Concept。其目标是通过基于 Luhn 算法结合加密签名的标识符验证方案，最大限度地减少传输过程中敏感数据的暴露。与传统的 TLS/HTTPS 不同，HSTP 包括双向负载验证、早期异常检测和为每个数据包重新生成的临时令牌系统。专为每个数据点完整性至关重要的场景设计。",
+      },
+      odoo: {
+        short: "在 Odoo 中实施定制开票和库存系统。",
+        long: "由 Sebastián Corona 为 Yerbatera del Sur Co. 执行的咨询项目，这是一家致力于马黛茶商业化的阿根廷公司。Odoo 实施集中了整个运营：产品控制（支持批次、到期和特定计量单位）、运输、供应商和以前分散在电子表格中的商业运营。定制模块包括具有阿根廷财政有效性的发票生成、按产品划分的盈利能力报告、自动关键库存警报以及带实时 KPI 的管理仪表板。在头三个月内将开票错误减少了 30%。",
+      },
+      huizhiyun: {
+        short: "中国-拉美贸易的多语言开票管道。",
+        long: "由 Sebastián Corona 为汇智云科技有限公司执行的咨询项目，这是一家专门从事企业数据的中国公司。挑战：构建一个开票管道，处理中文字符文档（混合 UTF-8、GBK 和 GB2312 编码），以实时汇率自动转换货币（CNY、EUR、USD），并以三种语言（普通话、英语和西班牙语）生成执行报告。Sebastián 使用 Python、pandas 和 openpyxl 开发了提取引擎，使用金融 API 开发了转换系统，并使用 ReportLab 和 CJK 字体生成 PDF。项目非常成功，以至于这家中国公司资助了 Sebastián 的普通话学习。",
+      },
+    },
     team: {
       members: [
         { role: "创始人兼首席技术官", description: "Codex Studio VE 创始人，数字化转型领导者。资深开发人员，专精于全栈开发、企业自动化、ERP 集成（Odoo）和高性能云架构。专业视频编辑。委内瑞拉技术创新标杆。" },
@@ -379,7 +519,7 @@ export const translations = {
       { quote: "Codex Studio 彻底改变了我们的在线商店。他们对细节的关注和现代设计在几周内令人难以置信地提升了我们的销售额。", author: "商务经理", company: "Veraux Ropa", location: "委内瑞拉" },
       { quote: "团队完全理解了我们的企业愿景。平台快速、安全，并传达了我们所寻求的信任。", author: "首席执行官", company: "Altivan Inmobiliaria", location: "委内瑞拉" },
       { quote: "我们的企业门户实现了跨越式发展。运营更快，整个团队的界面极其直观。", author: "运营总监", company: "Concretera Solidexa", location: "委内瑞拉" },
-      { quote: "他们提供的视觉质量超出了所有期望。我们的客户享受现代、响应迅速且动态的目录。", author: "所有者", company: "Concesionario La Fé", location: "委内瑞拉" },
+      { quote: "他们提供的视觉质量超出了所有期望。我们的客户享受现代、响应迅速且动态的目录。", author: "所有者", company: "Concesionario La Fe", location: "委内瑞拉" },
       { quote: "Sebastián 改变了我们的物流运营。仅在 3 周内将开票错误减少了 30%。", author: "总经理", company: "Yerbatera del Sur S.A.", location: "阿根廷" },
       { quote: "多语言开票管道超出了我们所有的期望。中文字符处理完美无瑕，报告提供 3 种语言。", author: "运营总监", company: "汇智云科技", location: "中国" },
       { quote: "我们的会计报告自动化率达到 50%。月度结账从 5 天缩短到 2 天。", author: "高级会计师", company: "武藏运输株式会社", location: "日本" },

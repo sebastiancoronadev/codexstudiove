@@ -13,7 +13,7 @@ export function Portfolio() {
 
   return (
     <section id="portafolio" className="relative py-20 md:py-32 bg-[#0a0a0a]">
-      <div className="absolute inset-0 bg-grid-pattern opacity-10" />
+      <div className="absolute inset-0 bg-grid-pattern opacity-10 pointer-events-none" />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-pink-600/5 rounded-full blur-[180px] pointer-events-none" />
 
       <div className="relative z-10 container mx-auto px-4 md:px-6">
@@ -36,13 +36,13 @@ export function Portfolio() {
                       {project.logo ? (
                         <Image
                           src={project.logo}
-                          alt={`${project.title} logo`}
+                          alt={`${project.title} - Proyecto de Codex Studio VE`}
                           fill
                           sizes="64px"
                           className="object-contain p-2"
                         />
                       ) : (
-                        <i className={`bi ${project.icon} text-2xl text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-orange-400`} />
+                        <i className={`bi ${project.icon} text-2xl text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-orange-400`} aria-hidden="true" />
                       )}
                     </div>
                     {project.url !== "#" && (
@@ -53,17 +53,17 @@ export function Portfolio() {
                         className="w-10 h-10 rounded-full bg-white/[0.03] border border-white/10 flex items-center justify-center text-white/40 hover:text-pink-400 hover:border-pink-500/40 hover:bg-pink-500/10 transition-all duration-300"
                         aria-label={`Ver ${project.title}`}
                       >
-                        <i className="bi bi-arrow-up-right text-base" />
+                        <i className="bi bi-arrow-up-right text-base" aria-hidden="true" />
                       </a>
                     )}
                   </div>
 
-                  <h3 className="font-outfit text-[20px] md:text-[22px] font-bold text-white mb-3 leading-tight tracking-tight">
+                  <p className="font-outfit text-[20px] md:text-[22px] font-bold text-white mb-3 leading-tight tracking-tight">
                     {project.title}
-                  </h3>
+                  </p>
 
                   <p className="font-outfit text-[14px] font-light text-white/50 leading-[1.7] mb-6 flex-grow">
-                    {project.description}
+                    {t(project.descriptionKey)}
                   </p>
 
                   <div className="flex flex-wrap gap-2 mb-6">
@@ -81,7 +81,7 @@ export function Portfolio() {
                     <span className="font-outfit text-sm font-semibold text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-orange-400">
                       {t("projectModal.readMore")}
                     </span>
-                    <i className="bi bi-arrow-right text-pink-400 group-hover/btn:translate-x-1 transition-transform duration-300" />
+                    <i className="bi bi-arrow-right text-pink-400 group-hover/btn:translate-x-1 transition-transform duration-300" aria-hidden="true" />
                   </button>
                 </div>
               </GlowCard>
@@ -90,7 +90,6 @@ export function Portfolio() {
         </div>
       </div>
 
-      {/* MODAL */}
       <AnimatePresence>
         {openIndex !== null && (
           <motion.div
@@ -112,47 +111,48 @@ export function Portfolio() {
                 <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/30 to-transparent" />
 
                 <button
+                  type="button"
                   onClick={() => setOpenIndex(null)}
-                  className="absolute top-5 right-5 w-10 h-10 rounded-full bg-white/[0.04] border border-white/10 flex items-center justify-center text-white/60 hover:text-white hover:bg-white/[0.08] transition-all"
+                  className="absolute top-4 right-4 z-30 w-11 h-11 rounded-full bg-gradient-to-br from-pink-600 to-orange-500 border border-white/30 flex items-center justify-center text-white shadow-[0_0_20px_rgba(236,72,153,0.5)] hover:shadow-[0_0_35px_rgba(236,72,153,0.8)] hover:scale-110 active:scale-95 transition-all duration-300"
                   aria-label={t("projectModal.close")}
                 >
-                  <i className="bi bi-x-lg text-base" />
+                  <i className="bi bi-x-lg text-lg font-bold" aria-hidden="true" />
                 </button>
 
-                <div className="mb-6">
+                <div className="mb-6 pt-8 md:pt-0">
                   <div className="w-20 h-20 rounded-2xl bg-white/[0.04] border border-white/10 flex items-center justify-center overflow-hidden relative mb-5">
                     {projects[openIndex].logo ? (
                       <Image
                         src={projects[openIndex].logo!}
-                        alt={`${projects[openIndex].title} logo`}
+                        alt={`${projects[openIndex].title} - Logo del proyecto`}
                         fill
                         sizes="80px"
                         className="object-contain p-2"
                       />
                     ) : (
-                      <i className={`bi ${projects[openIndex].icon} text-3xl text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-orange-400`} />
+                      <i className={`bi ${projects[openIndex].icon} text-3xl text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-orange-400`} aria-hidden="true" />
                     )}
                   </div>
 
-                  <h2 className="font-outfit text-3xl md:text-4xl font-bold text-white mb-2 tracking-tight">
+                  <p className="font-outfit text-3xl md:text-4xl font-bold text-white mb-2 tracking-tight">
                     {projects[openIndex].title}
-                  </h2>
+                  </p>
 
                   <p className="font-outfit text-sm font-light text-white/50">
-                    {projects[openIndex].description}
+                    {t(projects[openIndex].descriptionKey)}
                   </p>
                 </div>
 
                 <div className="font-outfit text-[15px] font-light text-white/70 leading-[1.8] mb-8 space-y-4">
-                  {projects[openIndex].longDescription.split("\n\n").map((para, i) => (
+                  {(t(projects[openIndex].longDescriptionKey) as string).split("\n\n").map((para, i) => (
                     <p key={i}>{para}</p>
                   ))}
                 </div>
 
                 <div className="mb-8">
-                  <h4 className="font-outfit text-xs uppercase tracking-widest text-white/40 mb-3">
+                  <p className="font-outfit text-xs uppercase tracking-widest text-white/40 mb-3">
                     {t("projectModal.tech")}
-                  </h4>
+                  </p>
                   <div className="flex flex-wrap gap-2">
                     {projects[openIndex].tech.map((tech, i) => (
                       <span key={i} className="px-3 py-1.5 text-[12px] font-outfit font-medium text-white/70 bg-white/[0.04] border border-white/[0.08] rounded-full tracking-wide">
@@ -169,7 +169,7 @@ export function Portfolio() {
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-gradient-to-r from-pink-600 to-orange-500 text-white font-outfit font-bold hover:shadow-[0_0_40px_rgba(236,72,153,0.5)] transition-all duration-300"
                   >
-                    <i className="bi bi-box-arrow-up-right" />
+                    <i className="bi bi-box-arrow-up-right" aria-hidden="true" />
                     {t("projectModal.visit")}
                   </a>
                 )}
