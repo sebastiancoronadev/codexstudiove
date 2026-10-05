@@ -1,0 +1,15 @@
+export const paymentMethods = [
+  { name: "American Express", image: "/assets/images/payments/american-express.png" },
+  { name: "Apple Pay", image: "/assets/images/payments/applepay.png" },
+  { name: "Banesco", image: "/assets/images/payments/banesco.png" },
+  { name: "Binance", image: "/assets/images/payments/binance.png" },
+  { name: "BNC", image: "/assets/images/payments/bnc.png" },
+  { name: "BrumBank", image: "/assets/images/payments/brubank.png" },
+  { name: "Diners Club", image: "/assets/images/payments/diners-club.png" },
+  { name: "Discover", image: "/assets/images/payments/discover.png" },
+  { name: "Google Pay", image: "/assets/images/payments/googlepay.png" },
+  { name: "Mastercard", image: "/assets/images/payments/mastercard.png" },
+  { name: "PayPal", image: "/assets/images/payments/paypal.png" },
+  { name: "Visa", image: "/assets/images/payments/visa.png" },
+  { name: "Zinli", image: "/assets/images/payments/zinli.png" },
+];
